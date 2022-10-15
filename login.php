@@ -1,4 +1,5 @@
-<?php include("app/includes/header.php") ?>
+<?php require_once 'path.php'; ?>
+<?php include(ROOT_PATH . "/app/includes/header.php") ?>
 
     <div class="container">
 
@@ -33,4 +34,4 @@
 
     </div>
     
-<?php include("app/includes/footer.php") ?> 
+    <?php include(ROOT_PATH . "/app/includes/footer.php") ?> 

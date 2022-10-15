@@ -72,7 +72,7 @@
                             <div class="topic">
                                 <p><a href="#">Entertainment</a></p>
                             </div>
-                            <a href="#"><img src="images/images(56).jpg" alt="NEWS"></a>
+                            <a href="#"><img src="assets/images/images(56).jpg" alt="NEWS"></a>
                         </div>
                         <div class="title_sec">
                             <a href="#">
@@ -112,7 +112,7 @@
 
                                     <p><span class="fas fa-play"></p>
                                 </div>
-                                <img src="images/NACOMES.jpeg" alt="NEWS">
+                                <img src="assets/images/NACOMES.jpeg" alt="NEWS">
                             </a>
                         </div>
 
@@ -155,7 +155,7 @@
                             <div class="topic">
                                 <p><a href="#">Sports</a></p>
                             </div>
-                            <a href="#"><img src="images/images(56).jpg" alt="NEWS"></a>
+                            <a href="#"><img src="assets/images/images(56).jpg" alt="NEWS"></a>
                         </div>
                         <div class="title_sec">
                             <a href="#">
@@ -204,7 +204,7 @@
                                 <p style="font-size: 13px;">1</p>
                             </div>
                             <a href="#">
-                                <img src="images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -223,7 +223,7 @@
                                 <p style="font-size: 13px;">2</p>
                             </div>
                             <a href="#">
-                                <img src="images/images(56).jpg" alt="NEWS">
+                                <img src="assets/images/images(56).jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -241,7 +241,7 @@
                                 <p style="font-size: 13px;">3</p>
                             </div>
                             <a href="#">
-                                <img src="images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -259,7 +259,7 @@
                                 <p style="font-size: 13px;">4</p>
                             </div>
                             <a href="#">
-                                <img src="images/NACOMES.jpeg" alt="NEWS">
+                                <img src="assets/images/NACOMES.jpeg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -277,7 +277,7 @@
                                 <p style="font-size: 13px;">5</p>
                             </div>
                             <a href="#">
-                                <img src="images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -310,7 +310,7 @@
                                 <p style="font-size: 13px;">1</p>
                             </div>
                             <a href="#">
-                                <img src="images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -329,7 +329,7 @@
                                 <p style="font-size: 13px;">2</p>
                             </div>
                             <a href="#">
-                                <img src="images/images(56).jpg" alt="NEWS">
+                                <img src="assets/images/images(56).jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -347,7 +347,7 @@
                                 <p style="font-size: 13px;">3</p>
                             </div>
                             <a href="#">
-                                <img src="images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -365,7 +365,7 @@
                                 <p style="font-size: 13px;">4</p>
                             </div>
                             <a href="#">
-                                <img src="images/NACOMES.jpeg" alt="NEWS">
+                                <img src="assets/images/NACOMES.jpeg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">
@@ -383,7 +383,7 @@
                                 <p style="font-size: 13px;">5</p>
                             </div>
                             <a href="#">
-                                <img src="images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
                             </a>
                         </div>
                         <div class="mobile_title_sec">

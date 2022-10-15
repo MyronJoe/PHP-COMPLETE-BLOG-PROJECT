@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <title>Myron Blog</title>
-    <!-- <link rel="stylesheet" href="css/Bootstrap/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-</head>
-
-<body>
-    <div class="containerr">
-
-        <div class="hero">
-            <div class="logo">
-                CodingNepal
-            </div>
-            <nav>
-                <div>
-                    <div class="cancel-icon">
-                        <span class="fas fa-times"></span>
-                    </div>
-                    <div class="menu-icon">
-                        <span class="fas fa-bars"></span>
-                    </div>
-                </div>
-                <div class="nav-items">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Feedback</a></li>
-                </div>
-                <div class="search-icon">
-                    <!-- <span class="fas fa-search"></span> -->
-                </div>
-            </nav>
-            <form action="#" class="nav_form mobile_nav">
-                <input type="search" class="search-data" placeholder="Search" required>
-                <button type="submit" class="fas fa-search"></button>
-            </form>
-
-        </div>
-    </div>
+<?php include("app/includes/header.php") ?>
 
     <div class="container">
 
@@ -69,7 +24,7 @@
                     </div>
 
                     <div>
-                        <small style="font-size: 11px;">You dont have an account? <a href="#">Sing up</a></small>
+                        <small style="font-size: 11px;">You dont have an account? <a href="register.php">Sing up</a></small>
                     </div>
                 </form>
 
@@ -77,31 +32,5 @@
         </div>
 
     </div>
-
-    <div class="footer containerr">
-
-
-        <div class="social-icon">
-            <li><a href="#" class="fas fa-search"></a></li>
-            <li><a href="#" class="fas fa-times"></a></li>
-            <li><a href="#" class="fas fa-calculator"></a></li>
-            <li><a href="#" class="fas fa-clock"></a></li>
-        </div>
-
-        <div class="footer-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Feedback</a></li>
-        </div>
-
-        <p>KorrectNaija &copy 2022</p>
-    </div>
-    <script src="js/main.js"></script>
-    <script>
-
-    </script>
-</body>
-
-</html>
+    
+<?php include("app/includes/footer.php") ?> 

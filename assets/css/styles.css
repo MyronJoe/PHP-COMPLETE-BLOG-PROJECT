@@ -183,6 +183,7 @@ nav {
   letter-spacing: -1px;
   text-align: center;
   margin: 10px 0;
+  display: block;
 }
 
 nav .nav-items {
@@ -569,6 +570,8 @@ small {
   .logo {
     font-size: 50px;
     font-weight: 700;
+    display:block;
+    text-align: center;
   }
 
   nav .nav-items {

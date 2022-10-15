@@ -14,8 +14,8 @@
 <div class="containerr">
 
         <div class="hero">
-            <div class="logo">
-                Myron Blog
+            <div  class="logo">
+                <a href="<?php echo BASE_URL . '/index.php'?>">Myron Blog</a>
             </div>
             <nav>
                 <div>
@@ -30,14 +30,14 @@
                     <!-- <span class="fas fa-search"></span> -->
                 </div>
                 <div class="nav-items">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="<?php echo BASE_URL . '/index.php'?>">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blogs</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Feedback</a></li>
                 </div>
                 <div class="user_handel">
-                    <li><a href="#">Login</a></li>
+                    <li><a href="<?php echo BASE_URL . '/login.php'?>">Login</a></li>
                     <li><a href="#"><i style="margin-right: 5px;" class="fas fa-user"></i>Kachi Joe<i
                                 style="margin-left: 5px;" class="fas fa-angle-down"></i></a></li>
                 </div>

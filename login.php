@@ -25,7 +25,7 @@
                     </div>
 
                     <div>
-                        <small style="font-size: 11px;">You dont have an account? <a href="register.php">Sing up</a></small>
+                        <small style="font-size: 11px;">You dont have an account? <a href="<?php echo BASE_URL . '/register.php'?>">Sing up</a></small>
                     </div>
                 </form>
 

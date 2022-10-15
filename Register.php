@@ -42,7 +42,7 @@
                     </div>
 
                     <div>
-                        <small style="font-size: 11px;">Already have an account? <a href="login.php">Sing In</a></small>
+                        <small style="font-size: 11px;">Already have an account? <a href="<?php echo BASE_URL . '/login.php'?>">Sing In</a></small>
                     </div>
                 </form>
 

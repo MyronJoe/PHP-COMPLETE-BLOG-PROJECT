@@ -76,6 +76,8 @@
         
     }
 
+
+    //here is the db create funtion 
     function create($table, $data){
         global $conn;
         $sql = "INSERT INTO $table SET ";
@@ -96,13 +98,36 @@
     }
 
 
+    //here is the db update funtion
+    function update($table, $id,  $data){
+        global $conn;
+        $sql = "UPDATE $table SET ";
+
+        $i = 0;
+        foreach ($data as $key => $value) {
+
+            if ($i === 0) {
+                $sql = $sql . " $key = ?";
+            }else{
+                $sql = $sql . ", $key = ?";
+            }
+            $i++;
+        }
+        $sql = $sql . " WHERE id = ?";
+
+        $data['id'] = $id;
+        $stmt = executeQuery($sql, $data);
+        return $stmt->affected_rows;
+    }
+
+
     $data = [
         'admin' => 1,
-        'username' => 'Kachi Joe',
-        'email' => 'Kachi@gmail.com',
-        'password' => 'myron'
+        'username' => 'joemin Kelani',
+        'email' => 'Oelani@gmail.com',
+        'password' => 'shitappens'
     ];
 
-    $id = create('users', $data);
+    $id = update('users', 4, $data);
     dump($id)
 ?>

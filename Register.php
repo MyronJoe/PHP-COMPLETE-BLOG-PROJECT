@@ -8,9 +8,12 @@
                 <div class="top">
                     <h4 class="m-0 text-uppercase font-weight-bold text-light">Register</h4>
                 </div>
-                <form method="POST" action="" novalidate class="form_sec" style="padding: 2.5em;">
+                <form method="POST" action="" novalidate class="form_sec" style="padding: 1.5em 2.5em 2.5em;">
 
-
+                    <!-- <div class="form-error">
+                        <p>Usernam needeed</p>
+                        <p>Usernam needeed</p>
+                    </div> -->
 
                     <div>
                         <label for="name">Name *</label>

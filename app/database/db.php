@@ -76,11 +76,33 @@
         
     }
 
-    $conditions = [
-        'email' => 'MyronJoe@gmail.com',
-        'id' => 1
+    function create($table, $data){
+        global $conn;
+        $sql = "INSERT INTO $table SET ";
+
+        $i = 0;
+        foreach ($data as $key => $value) {
+
+            if ($i === 0) {
+                $sql = $sql . " $key = ?";
+            }else{
+                $sql = $sql . ", $key = ?";
+            }
+            $i++;
+        }
+        $stmt = executeQuery($sql, $data);
+        $id = $stmt->insert_id;
+        return $id;
+    }
+
+
+    $data = [
+        'admin' => 1,
+        'username' => 'Kachi Joe',
+        'email' => 'Kachi@gmail.com',
+        'password' => 'myron'
     ];
 
-    $users = selectOne('users', $conditions);
-    dump($users)
+    $id = create('users', $data);
+    dump($id)
 ?>

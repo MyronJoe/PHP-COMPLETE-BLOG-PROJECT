@@ -1,13 +1,7 @@
 <?php require_once 'path.php'; ?>
 <?php include(ROOT_PATH . "/app/includes/header.php") ?>
+<?php include(ROOT_PATH . "/app/controllers/users.php") ?>
 
-<?php
-if (isset($_POST['register-btn'])) {
-    var_dump($_POST);
-    exit;
-}
-
-?>
     <div class="container">
 
         <div>

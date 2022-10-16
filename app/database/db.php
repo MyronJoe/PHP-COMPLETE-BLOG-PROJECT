@@ -60,6 +60,7 @@
         $values = array_values($conditions);
         $types = str_repeat('s', count($values));
         $stmt->bind_param($types, ...$values);
+        dump($stmt);
         $stmt->execute();
         $records = $stmt->get_result()->fetch_assoc();
         return $records;

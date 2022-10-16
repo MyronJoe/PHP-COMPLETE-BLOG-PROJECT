@@ -32,6 +32,7 @@
                 }
                 $i++;
             }
+            
             $stmt = $conn->prepare($sql);
             $values = array_values($conditions);
             $types = str_repeat('s', count($values));
@@ -56,6 +57,10 @@
             }
             $i++;
         }
+
+        //RETURNS THE FIRST CONDITION FOUND
+        $sql = $sql . " LIMIT 1";
+
         $stmt = $conn->prepare($sql);
         $values = array_values($conditions);
         $types = str_repeat('s', count($values));
@@ -72,6 +77,6 @@
         'id' => 1
     ];
 
-    $users = selectAll('users', $conditions);
+    $users = selectOne('users', $conditions);
     dump($users)
 ?>

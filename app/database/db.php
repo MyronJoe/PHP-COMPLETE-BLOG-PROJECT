@@ -11,16 +11,36 @@
     }
 
     
-    //function that select from db
-    function selectAll($table){
+    //function that select from db and also checks conditions to select
+    function selectAll($table, $conditions = []){
         global $conn;
         $sql = "SELECT * FROM $table";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-        return $records;
+        if (empty($conditions)) {
+            $stmt = $conn->prepare($sql);
+            $stmt->execute();
+            $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+            return $records;
+        }else{
+            $i = 0;
+            
+            foreach ($conditions as $key => $value) {
+
+                if ($i === 0) {
+                    $sql = $sql . "WHERE $key=$value";
+                }else{
+                    $sql = $sql . "AND $key=$value";
+                }
+                $i++;
+            }
+            // dump(($sql));
+        }
+        
     }
 
-    $users = selectAll('users');
-    dump($users)
+    $conditions = [
+        'email' => 'MyronJoe@gmail.com'
+    ];
+
+    $users = selectAll('users', $conditions);
+    // dump($users)
 ?>

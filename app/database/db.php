@@ -121,13 +121,18 @@
     }
 
 
-    $data = [
-        'admin' => 1,
-        'username' => 'joemin Kelani',
-        'email' => 'Oelani@gmail.com',
-        'password' => 'shitappens'
-    ];
 
-    $id = update('users', 4, $data);
-    dump($id)
+    //here is the db update funtion
+    function delete($table, $id){
+        global $conn;
+        $sql = "DELETE FROM $table WHERE id=? ";
+
+        $stmt = executeQuery($sql, ['id' => $id]);
+        return $stmt->affected_rows;
+    }
+
+
+
+    // $id = delete('users', 3);
+    // dump($id)
 ?>

@@ -3,6 +3,10 @@
     include(ROOT_PATH . '/app/database/db.php');
 
     $errors = [];
+    $username = '';
+    $email = '';
+    $password = '';
+    $confirmpass = '';
 
     if (isset($_POST['register-btn'])) {
 
@@ -32,6 +36,12 @@
 
             $user_id = create('users', $_POST);
             $user = selectOne('users', ['id' => $user_id]);
+        }else{
+            
+            $username = $_POST["username"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $confirmpass = $_POST["passwordconfirm"];
         }
         // dump($user);
     }

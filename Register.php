@@ -21,28 +21,27 @@
                         </div>
                     <?php endif; ?>
                     
-                    
                     <div>
                         <label for="name">Name *</label>
-                        <input type="text" class="form-control" id="name" name="username">
+                        <input type="text" class="form-control" value="<?php echo $username ?>" id="name" name="username">
                     </div>
 
 
                     <div>
                         <label for="email">Email *</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control"  value="<?php echo $email ?>" id="email" name="email">
                     </div>
 
 
                     <div>
                         <label for="Password">Password *</label>
-                        <input type="password" class="form-control" id="Password" name="password">
+                        <input type="password" class="form-control" value="<?php echo $password ?>" id="Password" name="password">
                     </div>
 
 
                     <div>
                         <label for="Confirm Password">Confirm Password *</label>
-                        <input type="password" class="form-control" id="Confirm Password" name="passwordconfirm">
+                        <input type="password" class="form-control" value="<?php echo $confirmpass ?>" id="Confirm Password" name="passwordconfirm">
                     </div>
 
 

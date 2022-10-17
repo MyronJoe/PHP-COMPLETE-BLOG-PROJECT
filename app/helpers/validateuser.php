@@ -30,4 +30,20 @@ function validateUser($user, $errors){
     return $errors;
 }
 
+function validateLogin($user, $errors){
+    
+
+    if (empty($user["email"])) {
+        array_push($errors, 'email is required');
+    }
+
+    if (empty($user["password"])) {
+        array_push($errors, 'password is required');
+    }
+
+    // dump($errors);
+
+    return $errors;
+}
+
 ?>

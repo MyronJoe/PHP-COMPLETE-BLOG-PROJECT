@@ -1,5 +1,8 @@
-<?php require_once 'path.php'; ?>
-<?php include(ROOT_PATH . "/app/includes/header.php") ?>
+<?php 
+    require_once 'path.php';
+    include(ROOT_PATH . "/app/controllers/users.php");
+    include(ROOT_PATH . "/app/includes/header.php"); 
+?>
 
     <div class="container">
 
@@ -8,20 +11,22 @@
                 <div class="top">
                     <h4>Login</h4>
                 </div>
-                <form method="POST" action="" novalidate class="form_sec" style="padding: 2.5em;">
+                <form method="POST" action="login.php" novalidate class="form_sec" style="padding: 1.5em 2.5em 2.5em;">
+
+                    <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
 
                     <div>
                         <label for="email">Email *</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" value="<?php echo $email ?>" name="email">
                     </div>
 
                     <div>
                         <label for="Password">Password *</label>
-                        <input type="password" class="form-control" id="Password">
+                        <input type="password" class="form-control" value="<?php echo $password ?>" id="Password" name="password">
                     </div>
 
                     <div class="form-group mb-0">
-                        <input type="submit" value="Login" class="btn">
+                        <input type="submit" name="login-btn" value="Login" class="btn">
                     </div>
 
                     <div>

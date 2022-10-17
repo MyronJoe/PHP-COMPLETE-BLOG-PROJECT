@@ -357,7 +357,7 @@ small {
 .mobile_title_sec,
 .title_sec {
   width: 70%;
-  padding: 5px ;
+  padding: 1em 5px 5px ;
 }
 
 .mobile_title_sec a h4 {

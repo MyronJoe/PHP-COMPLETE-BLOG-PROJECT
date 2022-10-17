@@ -1,13 +1,15 @@
 <?php
-    session_start();
     require_once 'path.php';
+    session_start();
     include(ROOT_PATH . "/app/includes/header.php");
-
     // var_dump($_SESSION);
 ?>
 
+    
 
     <div class="content">
+        
+        <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
 
         <section>
             <!-------------------------------- Left side ------------------------------------>
@@ -44,8 +46,6 @@
                                 2, 2022 | 13:22</small>
                         </div>
                     </div>
-
-
 
                     <div class="more">
                         <a href="">More Songs</a>

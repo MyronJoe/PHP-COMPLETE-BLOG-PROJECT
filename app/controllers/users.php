@@ -30,8 +30,13 @@
             $_SESSION['message'] = "You are now logged in";
             $_SESSION['type'] = "success";
 
-            header("location: " . BASE_URL . "/index.php");
+            if ($_SESSION['admin']) {
+                header("location: " . BASE_URL . "/admin/dashboard.php");
+            }else{
+                header("location: " . BASE_URL . "/index.php");
+            }
             exit();
+            
         }else{
 
             $username = $_POST["username"];

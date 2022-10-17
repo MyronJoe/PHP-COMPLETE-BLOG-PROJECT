@@ -47,8 +47,10 @@
                         <li class="handler"><a href="#"><?php echo $_SESSION['username']; ?><i style="margin-left: 5px;" class="fas fa-user"></i></a>
                             <div class="submenu">
                                 <ul>
-                                    <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
-
+                                    <!-- checks if a user is an admin -->
+                                    <?php if($_SESSION['admin']): ?>
+                                        <li><a href="<?php echo BASE_URL . 'admin/dashboard.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
+                                    <?php endif; ?>
                                     <!-- <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li> -->
 
                                     <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>

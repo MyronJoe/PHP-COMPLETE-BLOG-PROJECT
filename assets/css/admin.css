@@ -8,6 +8,22 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+section{
+  display: flex;
+}
+.rside{
+  padding: 1em;
+  width: 100%;
+}
+.rside-top{
+  float: right;
+}
+.adduser-sec{
+  margin-top: 3em;
+}
+.adduser-sec h2{
+  text-align: center;
+}
 .sidebar1 {
   position: fixed;
   left: -250px;
@@ -15,7 +31,7 @@ body {
   height: 100%;
   background: #042331;
   transition: all .5s ease;
-  top: 0;
+  top: 73px;
 }
 .sidebar1 header {
   font-size: 22px;
@@ -52,10 +68,11 @@ label #btn,label #cancel{
   background: #042331;
   border-radius: 3px;
   cursor: pointer;
+  
 }
 label #btn{
   left: 40px;
-  top: 25px;
+  top: 83px;
   font-size: 35px;
   color: white;
   padding: 6px 12px;
@@ -64,7 +81,7 @@ label #btn{
 label #cancel{
   z-index: 1111;
   left: -195px;
-  top: 17px;
+  top: 90px;
   font-size: 30px;
   color: #0a5275;
   padding: 4px 9px;
@@ -90,4 +107,33 @@ section{
   background-size: cover;
   height: 100vh;
   transition: all .5s;
+}
+nav{
+  background-color: #042331;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+nav a{
+  color: white;
+  text-decoration: none;
+}
+nav a:hover{
+  color: white;
+  text-decoration: none;
+}
+.user a{
+  font-weight: bold;
+}
+.form{
+  width: 70%;
+  margin: auto;
+}
+
+@media screen and (max-width:924px) {
+  .form{
+    width: 100%;
+    margin: auto;
+  }
 }

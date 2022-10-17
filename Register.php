@@ -13,13 +13,7 @@
 
                 <form method="POST" action="Register.php" novalidate class="form_sec" style="padding: 1.5em 2.5em 2.5em;">
 
-                    <?php if(count($errors) > 0): ?>
-                        <div class="form-error">
-                            <?php foreach($errors as $error): ?>
-                                <p><?php echo $error ?></p>
-                            <?php endforeach ?>
-                        </div>
-                    <?php endif; ?>
+                    <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
                     
                     <div>
                         <label for="name">Name *</label>

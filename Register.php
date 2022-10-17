@@ -1,6 +1,7 @@
 <?php require_once 'path.php'; ?>
-<?php include(ROOT_PATH . "/app/includes/header.php") ?>
 <?php include(ROOT_PATH . "/app/controllers/users.php") ?>
+<?php include(ROOT_PATH . "/app/includes/header.php") ?>
+
 
     <div class="container">
 
@@ -11,10 +12,16 @@
                 </div>
 
                 <form method="POST" action="Register.php" novalidate class="form_sec" style="padding: 1.5em 2.5em 2.5em;">
-                    <!-- <div class="form-error">
-                        <p>Usernam needeed</p>
-                        <p>Usernam needeed</p>
-                    </div> -->
+
+                    <?php if(count($errors) > 0): ?>
+                        <div class="form-error">
+                            <?php foreach($errors as $error): ?>
+                                <p><?php echo $error ?></p>
+                            <?php endforeach ?>
+                        </div>
+                    <?php endif; ?>
+                    
+                    
                     <div>
                         <label for="name">Name *</label>
                         <input type="text" class="form-control" id="name" name="username">

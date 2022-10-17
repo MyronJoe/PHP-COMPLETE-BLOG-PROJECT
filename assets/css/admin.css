@@ -27,7 +27,7 @@ section{
 .sidebar1 {
   position: fixed;
   left: -250px;
-  width: 250px;
+  width: 220px;
   height: 100%;
   background: #042331;
   transition: all .5s ease;
@@ -80,10 +80,10 @@ label #btn{
 }
 label #cancel{
   z-index: 1111;
-  left: -195px;
+  left: -165px;
   top: 90px;
   font-size: 30px;
-  color: #0a5275;
+  color: #fff;
   padding: 4px 9px;
   transition: all .5s ease;
 }
@@ -96,7 +96,7 @@ label #cancel{
   pointer-events: none;
 }
 #check1:checked ~ label #cancel{
-  left: 195px;
+  left: 170px;
 }
 #check1:checked ~ section{
   margin-left: 250px;
@@ -124,16 +124,26 @@ nav a:hover{
   text-decoration: none;
 }
 .user a{
-  font-weight: bold;
+  font-size: 20px;
 }
+
 .form{
   width: 70%;
   margin: auto;
+}
+.table{
+  width: 70% !important;
+  margin: auto !important;
 }
 
 @media screen and (max-width:924px) {
   .form{
     width: 100%;
-    margin: auto;
+  }
+}
+
+@media screen and (max-width:924px) {
+  .table{
+    width: 100% !important;
   }
 }

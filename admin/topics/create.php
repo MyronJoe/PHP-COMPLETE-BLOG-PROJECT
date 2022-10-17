@@ -9,8 +9,8 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
 
   <div class="rside">
     <div class="rside-top">
-      <a href="" class="btn btn-primary mr-3">Add Topic</a>
-      <a href="" class="btn btn-primary">Manage Topic</a>
+      <a href="<?php echo BASE_URL . '/admin/topics/create.php'; ?>" class="btn btn-primary mr-3">Add Topic</a>
+      <a href="<?php echo BASE_URL . '/admin/topics/index.php'; ?>" class="btn btn-primary">Manage Topic</a>
     </div>
 
     <div class="adduser-sec">

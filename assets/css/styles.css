@@ -13,7 +13,7 @@ img{
 .form-error{
   background-color: #ffb9d1;
   padding:8px 10px;
-  border: 2px solid #84012f;
+  border: 2px solid #491217;;
   margin-bottom: 1em;
 }
 /* body{
@@ -29,6 +29,17 @@ img{
 .ml,
 .m {
   margin: 10px;
+}
+.success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+.danger{
+  color: #491217;
+  background-color: #ffb9d1;
+  padding:8px 10px;
+  border-color: #491217;
 }
 
 .newslater {
@@ -103,10 +114,35 @@ img{
   background: #1D2D73;
   padding: 13px;
   color: white;
+  
+}
+.submenu ul{
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 10px 10px 10px 20px;
+  top: 50px;
+  transition: 2s ease-out;
+}
+.submenu ul li a{
+  color: #040820;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.submenu ul li a:hover{
+  color: orangered
+
+}
+.handler:hover .submenu ul{
+  display: block;
+  top: 20px;
+  
 }
 
 .user_handel {
   display: flex;
+  position: relative;
 }
 
 .user_handel li:nth-child(1) {

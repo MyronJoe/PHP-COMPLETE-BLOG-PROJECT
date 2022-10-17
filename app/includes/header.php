@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,16 @@
     <title>Myron Blog</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
 
-<div class="containerr">
+    <div class="containerr">
 
         <div class="hero">
-            <div  class="logo">
-                <a href="<?php echo BASE_URL . '/index.php'?>">Myron Blog</a>
+            <div class="logo">
+                <a href="<?php echo BASE_URL . '/index.php' ?>">Myron Blog</a>
             </div>
             <nav>
                 <div>
@@ -30,17 +32,27 @@
                     <!-- <span class="fas fa-search"></span> -->
                 </div>
                 <div class="nav-items">
-                    <li><a href="<?php echo BASE_URL . '/index.php'?>">Home</a></li>
+                    <li><a href="<?php echo BASE_URL . '/index.php' ?>">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blogs</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Feedback</a></li>
                 </div>
                 <div class="user_handel">
-                    <li><a href="<?php echo BASE_URL . '/login.php'?>">Login</a></li>
-                    <li><a href="#"><i style="margin-right: 5px;" class="fas fa-user"></i>Kachi Joe<i
-                                style="margin-left: 5px;" class="fas fa-angle-down"></i></a></li>
+                <!-- <li><a href="">Login</a></li> -->
+                <li class="handler"><a href="<?php echo BASE_URL . '/login.php' ?>">Kachi Joe<i style="margin-left: 5px;" class="fas fa-user"></i></a>
+                    <div class="submenu">
+                        <ul>
+                            <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
+
+                            <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li>
+
+                            <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
+                        </ul>
+                    </div>
+                </li>
                 </div>
+                
 
 
             </nav>

@@ -53,7 +53,7 @@
                                     <?php endif; ?>
                                     <!-- <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li> -->
 
-                                    <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
+                                    <li><a href="<?php echo BASE_URL . '/logout.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
                                 </ul>
                             </div>
                         </li>

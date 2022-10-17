@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,19 +39,28 @@
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Feedback</a></li>
                 </div>
+
                 <div class="user_handel">
-                <!-- <li><a href="">Login</a></li> -->
-                <li class="handler"><a href="<?php echo BASE_URL . '/login.php' ?>">Kachi Joe<i style="margin-left: 5px;" class="fas fa-user"></i></a>
-                    <div class="submenu">
-                        <ul>
-                            <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
 
-                            <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li>
+                    <!-- checks if a user is logged in inorder to display the user details -->
+                    <?php if(isset($_SESSION['id'])): ?>
+                        <li class="handler"><a href="#"><?php echo $_SESSION['username']; ?><i style="margin-left: 5px;" class="fas fa-user"></i></a>
+                            <div class="submenu">
+                                <ul>
+                                    <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
 
-                            <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
-                        </ul>
-                    </div>
-                </li>
+                                    <!-- <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li> -->
+
+                                    <li><a href=""><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    <?php else: ?>
+                        <!-- if the user is not loggrd in, it displays the rgister link -->
+                        <li><a href="<?php echo BASE_URL . '/register.php' ?>">Sing Up<span style="display: inline; margin-left:5px;" class="fa fa-user"></span> </a></li>
+                    <?php endif; ?>
+
+                
                 </div>
                 
 

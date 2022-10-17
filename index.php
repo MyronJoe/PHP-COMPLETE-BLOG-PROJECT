@@ -1,5 +1,11 @@
-<?php require_once 'path.php'; ?>
-<?php include(ROOT_PATH . "/app/includes/header.php") ?>
+<?php
+    session_start();
+    require_once 'path.php';
+    include(ROOT_PATH . "/app/includes/header.php");
+
+    // var_dump($_SESSION);
+?>
+
 
     <div class="content">
 

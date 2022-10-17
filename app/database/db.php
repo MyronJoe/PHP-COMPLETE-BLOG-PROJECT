@@ -1,6 +1,7 @@
 <?php
+    session_start();
+    
     require 'connect.php';
-
 
     //funtion for texting - will be deleted
     function dump($value){

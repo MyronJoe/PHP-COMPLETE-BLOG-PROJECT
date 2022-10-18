@@ -1,6 +1,8 @@
 <?php
 require_once '../../path.php';
 include ROOT_PATH . '/admin/includes/adminheader.php';
+include(ROOT_PATH . "/app/controllers/topics.php");
+
 ?>
 <section style="display: flex;">
     <div class="lside">
@@ -17,6 +19,13 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
             <h2>Manage Topics</h2>
 
             <table class="table mt-3">
+                
+                <div class="table">
+
+                    <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
+
+                </div>
+
                 <thead>
                     <tr>
                         <th scope="col">S/N</th>

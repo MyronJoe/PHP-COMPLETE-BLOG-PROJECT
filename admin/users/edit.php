@@ -14,17 +14,35 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
     </div>
 
     <div class="adduser-sec">
-      <h2>Update Users</h2>
+      <h2>Edit Users</h2>
 
       <form action="" method="" class="form">
         <div class="form-group">
-          <label for="user">Name</label>
-          <input type="email" class="form-control" id="user" name="user">
+          <label for="username">Usernam</label>
+          <input type="text" class="form-control" id="user" name="username">
         </div>
-    
+
         <div class="form-group">
-          <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="3" name=""></textarea>
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+
+        <div class="form-group">
+          <label for="passwordconfirm">Password Confirm</label>
+          <input type="password" class="form-control" id="passwordconfirm" name="passwordconfirm">
+        </div>
+
+        <div class="form-group">
+          <label for="user">Role</label>
+          <select class="form-control" id="user">
+            <option value="">Author</option>
+            <option value="">User</option>
+          </select>
         </div>
 
         <button type="submit" class="btn btn-primary my-2">Update User</button>

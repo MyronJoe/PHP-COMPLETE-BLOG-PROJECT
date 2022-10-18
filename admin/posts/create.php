@@ -18,13 +18,26 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
 
       <form action="" method="" class="form">
         <div class="form-group">
-          <label for="post">Name</label>
-          <input type="email" class="form-control" id="post" name="post">
+          <label for="post">Title</label>
+          <input type="email" class="form-control" id="post" name="title">
         </div>
     
         <div class="form-group">
-          <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="3" name=""></textarea>
+          <label for="description">Content</label>
+          <textarea class="form-control" id="description" rows="3" name="body"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image</label>
+          <input type="file" class="form-control-file" id="image" name="image">
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select name="topic" class="form-control" id="topic">
+            <option value="poetry">Poetry</option>
+            <option value="life">Life</option>
+          </select>
         </div>
 
         <button type="submit" class="btn btn-primary my-2">Add Post</button>

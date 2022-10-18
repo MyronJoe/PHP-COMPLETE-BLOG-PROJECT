@@ -35,22 +35,29 @@ include(ROOT_PATH . "/app/controllers/topics.php");
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>
-                        <a href="<?php echo BASE_URL . '/admin/topics/edit.php'; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr>
-                    <tr>
+
+                    <?php foreach ($topics as $key => $topic): ?>
+
+                        <tr>
+                            <th scope="row"><?php echo $key + 1 ?></th>
+                            <td><?php echo $topic['name'] ?></td>
+                            <td>
+                            <a href="edit.php?id=<?php echo $topic['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
+                                <a href="" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+
+                    <?php endforeach ?>
+
+                    
+                    <!-- <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
                         <td>
                             <a href="<?php echo BASE_URL . '/admin/topics/edit.php'; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
                             <a href="" class="btn btn-sm btn-danger">Delete</a>
                         </td>
-                    </tr>
+                    </tr> -->
                 </tbody>
             </table>
 

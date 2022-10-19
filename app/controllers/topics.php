@@ -26,4 +26,14 @@
         $description = $topic['description'];
         
     }
+
+    if (isset($_POST['edit-topic'])) {
+        $id = $_POST['id'];
+        unset($_POST['id'], $_POST['edit-topic']);
+        $topic_id = update($table, $id,  $_POST);
+        $_SESSION['message'] = 'Topic updated successfully';
+        $_SESSION["type"] = "success";
+        header('location: '. BASE_URL . '/admin/topics/index.php');
+        exit();
+    }
 ?>

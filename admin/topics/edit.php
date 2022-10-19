@@ -1,6 +1,7 @@
 <?php
 require_once '../../path.php';
 include ROOT_PATH . '/admin/includes/adminheader.php';
+include(ROOT_PATH . "/app/controllers/topics.php");
 ?>
 <section style="display: flex;">
   <div class="lside">
@@ -16,18 +17,21 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
     <div class="adduser-sec">
       <h2>Edit Topic</h2>
 
-      <form action="" method="" class="form">
+      <form action="<?php echo BASE_URL . '/admin/topics/edit.php'; ?>" method="POST" class="form" novalidate>
+
+        <input type="hidden" value="<?php echo $id ?>" class="form-control" id="id" name="id">
+        
         <div class="form-group">
           <label for="topic">Name</label>
-          <input type="email" class="form-control" id="topic" name="topic">
+          <input type="text" class="form-control" value="<?php echo $name?>" id="topic" name="name">
         </div>
     
         <div class="form-group">
           <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="3" name=""></textarea>
+          <textarea class="form-control" id="description" rows="3" name="description"><?php echo $description ?></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary my-2">Update Topic</button>
+        <button type="submit" name="edit-topic" class="btn btn-primary my-2">Edit Topic</button>
       </form>
     </div>
 

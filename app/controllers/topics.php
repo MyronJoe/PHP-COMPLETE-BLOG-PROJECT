@@ -3,6 +3,10 @@
 
     $table = 'topics';
 
+    $id = '';
+    $name = '';
+    $description = '';
+
     $topics = selectAll($table);
 
     if (isset($_POST['add-topic'])) {
@@ -12,5 +16,14 @@
         $_SESSION["type"] = "success";
         header('location: '. BASE_URL . '/admin/topics/index.php');
         exit();
+    }
+
+    if(isset($_GET['id'])){
+        $id = $_GET['id'];
+        $topic = selectOne($table, ['id' => $id]);
+        $id = $topic['id'];
+        $name = $topic['name'];
+        $description = $topic['description'];
+        
     }
 ?>

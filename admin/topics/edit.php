@@ -18,6 +18,8 @@ include(ROOT_PATH . "/app/controllers/topics.php");
       <h2>Edit Topic</h2>
 
       <form action="<?php echo BASE_URL . '/admin/topics/edit.php'; ?>" method="POST" class="form" novalidate>
+      
+      <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
 
         <input type="hidden" value="<?php echo $id ?>" class="form-control" id="id" name="id">
         

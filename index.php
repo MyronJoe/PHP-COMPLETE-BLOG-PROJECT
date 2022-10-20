@@ -128,10 +128,6 @@
                                 2, 2022 | 13:22</small>
                         </div>
                     </div>
-
-
-
-
                     <div class="more">
                         <a href="">More News</a>
                     </div>

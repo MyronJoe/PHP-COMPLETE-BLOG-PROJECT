@@ -215,3 +215,12 @@
         <button type="submit" class="fas fa-search"></button>
     </form>
 </div>
+
+
+<div >
+    <ul class="tags"> 
+    <?php foreach ($topics as $key => $topic): ?>
+        <li class="tag"><a href=""><?php echo $topic['name'] ?></a></li>
+    <?php endforeach ?>
+    </ul>
+</div>

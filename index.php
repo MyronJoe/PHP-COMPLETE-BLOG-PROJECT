@@ -1,7 +1,8 @@
 <?php
     require_once 'path.php';
-    session_start();
+    // session_start();
     include(ROOT_PATH . "/app/includes/header.php");
+    include(ROOT_PATH . "/app/controllers/topics.php");
     // var_dump($_SESSION);
 ?>
 
@@ -139,10 +140,8 @@
             </div>
             <!-------------------------------- Right side ------------------------------------>
             <div class="right">
-
                 <?php include("app/includes/side.php") ?>
-
-
+                
             </div>
         </section>
 

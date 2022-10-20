@@ -41,7 +41,27 @@ img{
   padding:8px 10px;
   border-color: #491217;
 }
-
+.tags{
+  display: flex;
+  /* justify-content: space-evenly; */
+  list-style: none;
+  flex-wrap: wrap;
+  background: #040820;
+  margin-bottom: 15px;
+  color: white;
+  text-align: center;
+  padding: 1em .8em;
+}
+.tag a{
+  background-color: white;
+  display: block;
+  padding: 8px 1em;
+  border-radius: 4px;
+  margin: 6px 4px;
+}
+.tag a:hover{
+  background-color: rgb(212, 212, 212);
+}
 .newslater {
   /* height:170px; */
   background: #040820;

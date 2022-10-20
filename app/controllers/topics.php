@@ -44,12 +44,19 @@
     }
 
     if (isset($_POST['edit-topic'])) {
-        $id = $_POST['id'];
-        unset($_POST['id'], $_POST['edit-topic']);
-        $topic_id = update($table, $id,  $_POST);
-        $_SESSION['message'] = 'Topic updated successfully';
-        $_SESSION["type"] = "success";
-        header('location: '. BASE_URL . '/admin/topics/index.php');
-        exit();
+        $errors = validateTopic($_POST, $errors);
+        if (count($errors) === 0) {
+            $id = $_POST['id'];
+            unset($_POST['id'], $_POST['edit-topic']);
+            $topic_id = update($table, $id,  $_POST);
+            $_SESSION['message'] = 'Topic updated successfully';
+            $_SESSION["type"] = "success";
+            header('location: '. BASE_URL . '/admin/topics/index.php');
+            exit();   
+        }else{
+            $id = $_POST["id"];
+            $name = $_POST["name"];
+            $description = $_POST["description"];
+        }
     }
 ?>

@@ -43,7 +43,7 @@ include(ROOT_PATH . "/app/controllers/topics.php");
                             <td><?php echo $topic['name'] ?></td>
                             <td>
                             <a href="edit.php?id=<?php echo $topic['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="index.php?del_id=<?php echo $topic['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
 

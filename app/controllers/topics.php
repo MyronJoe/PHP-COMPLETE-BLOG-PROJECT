@@ -26,6 +26,14 @@
         $description = $topic['description'];
         
     }
+    if (isset($_GET['del_id'])) {
+        $id = $_GET['del_id'];
+        $count = delete($table, $id);
+        $_SESSION['message'] = 'Topic was deleted successfully';
+        $_SESSION["type"] = "success";
+        header('location: '. BASE_URL . '/admin/topics/index.php');
+        exit();
+    }
 
     if (isset($_POST['edit-topic'])) {
         $id = $_POST['id'];

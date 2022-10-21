@@ -13,26 +13,18 @@ include(ROOT_PATH . "/app/controllers/posts.php")
             <a href="<?php echo BASE_URL . '/admin/posts/create.php'; ?>" class="btn btn-primary mr-3">Add Post</a>
             <a href="<?php echo BASE_URL . '/admin/posts/index.php'; ?>" class="btn btn-primary">Manage Post</a>
         </div>
-
         <div class="adduser-sec">
             <h2>Manage Posts</h2>
-
             <table class="table mt-3 text">
-
                 <div class="table">
-
                     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
-
                 </div>
-                
                 <tr>
                     <th>S/N</th>
                     <th>Title</th>
                     <th>Author</th>
                     <th>Action</th>
                 </tr>
-        
-
                 <?php foreach ($posts as $key => $post): ?>
                     <tr>
                         <th scope="row"><?php echo $key + 1; ?></th>
@@ -54,16 +46,6 @@ include(ROOT_PATH . "/app/controllers/posts.php")
 
                     </tr>         
                 <?php endforeach ?>
-                <!-- <tr>
-                    <th scope="row">1</th>
-                    <td>This is our first post</td>
-                    <td>Myron</td>
-                    <td class="d-flex justify-content-between">
-                    <a href="<?php echo BASE_URL . '/admin/posts/edit.php'; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                    <a href="" class="btn btn-sm btn-danger mr-1">Delete</a>
-                    <a href="" class="">Publish</a>
-                    </td>
-                </tr> -->
             </table>
 
 

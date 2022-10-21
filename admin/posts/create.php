@@ -1,6 +1,7 @@
 <?php
 require_once '../../path.php';
 include ROOT_PATH . '/admin/includes/adminheader.php';
+include(ROOT_PATH . "/app/controllers/posts.php")
 ?>
 <section style="display: flex;">
   <div class="lside">
@@ -16,10 +17,10 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
     <div class="adduser-sec">
       <h2>Add Post</h2>
 
-      <form action="" method="" class="form">
+      <form action="create.php" method="POST" class="form" novalidate>
         <div class="form-group">
           <label for="post">Title</label>
-          <input type="email" class="form-control" id="post" name="title">
+          <input type="text" class="form-control" id="post" name="title">
         </div>
     
         <div class="form-group">
@@ -40,7 +41,7 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
           </select>
         </div>
 
-        <button type="submit" class="btn btn-primary my-2">Add Post</button>
+        <button type="submit" name="post-btn" class="btn btn-primary my-2">Add Post</button>
       </form>
     </div>
 

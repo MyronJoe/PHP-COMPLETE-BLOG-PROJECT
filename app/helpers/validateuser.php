@@ -21,7 +21,7 @@ function validateUser($user, $errors){
     
     //checking if an email already exist
     $existingUser = selectOne('users', ['email' => $user["email"]]);
-    if(isset($existingUser)){
+    if($existingUser){
         array_push($errors, 'Email already exists');
     }
 

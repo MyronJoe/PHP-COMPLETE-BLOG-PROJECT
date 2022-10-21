@@ -6,7 +6,7 @@ function validateTopic($topic, $errors){
     }
     //checking if an email already exist
     $existingTopic= selectOne('topics', ['name' => $topic["name"]]);
-    if(isset($existingTopic)){
+    if($existingTopic){
         array_push($errors, 'Topic already exists');
     }
     // dump($errors);

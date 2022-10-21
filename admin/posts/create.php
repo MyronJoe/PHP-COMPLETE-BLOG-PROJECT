@@ -36,8 +36,11 @@ include(ROOT_PATH . "/app/controllers/posts.php")
         <div class="form-group">
           <label for="topic">Topic</label>
           <select name="topic" class="form-control" id="topic">
-            <option value="poetry">Poetry</option>
-            <option value="life">Life</option>
+          <option value=""></option>
+          <?php foreach ($topics as $key => $topic): ?>          
+            <option value="<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></option>
+          <?php endforeach ?>
+            
           </select>
         </div>
 

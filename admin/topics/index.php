@@ -37,7 +37,7 @@ include(ROOT_PATH . "/app/controllers/topics.php");
                 <tbody>
 
                     <?php foreach ($topics as $key => $topic): ?>
-
+                        
                         <tr>
                             <th scope="row"><?php echo $key + 1 ?></th>
                             <td><?php echo $topic['name'] ?></td>

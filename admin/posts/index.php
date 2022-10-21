@@ -44,7 +44,7 @@ include(ROOT_PATH . "/app/controllers/posts.php")
                             
                             <a href="" class="btn btn-sm btn-danger mr-1">Delete</a>
                             
-                            <?php if($post['published'] == 1): ?>
+                            <?php if($post['published']): ?>
                                 <a href="" class="">Unpublish</a>
                             <?php else: ?>
                                 <a href="" class="">Publish</a>

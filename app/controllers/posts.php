@@ -11,6 +11,7 @@ $errors = [];
 $title = '';
 $body= '';
 $topic_id = '';
+$published = '';
 
 if(isset($_POST['post-btn'])){
     $errors = validatePost($_POST, $errors);
@@ -29,6 +30,7 @@ if(isset($_POST['post-btn'])){
         $title = $_POST['title'];
         $body = $_POST['body'];
         $topic_id = $_POST['topic_id'];
+        $published = isset($_POST['published']) ? 1 : 0;
     }
 }
 

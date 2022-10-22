@@ -17,7 +17,7 @@ if(isset($_POST['post-btn'])){
     if (count($errors) == 0) {
         unset($_POST['post-btn'], $_POST['topic_id']);
         $_POST['user_id'] = 1;
-        $_POST['published'] = 1;
+        $_POST['published'] = isset($_POST['published']) ? 1 : 0;
 
         $post_id = create($table, $_POST);
         $_SESSION['message'] = 'Post created successfully';

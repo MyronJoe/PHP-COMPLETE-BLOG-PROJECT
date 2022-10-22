@@ -28,6 +28,17 @@ if (isset($_GET['id'])) {
     // dump($post);
 }
 
+//Delete functionality
+if (isset($_GET['del_id'])) {
+    $id = $_GET['del_id'];
+    $count = delete($table, $id);
+    $_SESSION['message'] = 'Post was deleted successfully';
+    $_SESSION["type"] = "success";
+    header('location: '. BASE_URL . '/admin/posts/index.php');
+    exit();
+}
+
+
 //add post funtinality
 if(isset($_POST['post-btn'])){
     // dump($_FILES['image']);

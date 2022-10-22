@@ -17,7 +17,7 @@ include(ROOT_PATH . "/app/controllers/posts.php")
     <div class="adduser-sec">
       <h2>Add Post</h2>
 
-      <form action="create.php" method="POST" class="form" novalidate>
+      <form action="create.php" method="POST" class="form" novalidate enctype="multipart/form-data">
 
       <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
 

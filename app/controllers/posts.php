@@ -14,9 +14,28 @@ $topic_id = '';
 $published = '';
 
 if(isset($_POST['post-btn'])){
+    // dump($_FILES['image']);
     $errors = validatePost($_POST, $errors);
+    //image upload
+    if (!empty($_FILES['image']['name'])) {
+        $imageName = time() ."_". $_FILES['image']['name'];
+        $destination = ROOT_PATH . '/assets/images/' . $imageName;
+
+        $result = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
+
+        if ($result) {
+            $_POST['image'] = $imageName;
+        }else{
+            array_push($errors, 'Image failed to upload');
+        }
+
+    }else{
+        array_push($errors, 'Image is required');
+    }
+
+     //Post upload
     if (count($errors) == 0) {
-        unset($_POST['post-btn'], $_POST['topic_id']);
+        unset($_POST['post-btn']);
         $_POST['user_id'] = 1;
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
 

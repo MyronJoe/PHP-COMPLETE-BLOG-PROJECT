@@ -71,6 +71,7 @@ if(isset($_POST['post-btn'])){
 
 
 if(isset($_POST['edit-post-btn'])){
+    
     $errors = validatePost($_POST, $errors);
     
     if (!empty($_FILES['image']['name'])) {
@@ -90,11 +91,11 @@ if(isset($_POST['edit-post-btn'])){
     }
 
     if (count($errors) == 0) {
-        $id = $_POST['"id"'];
-        unset($_POST['edit-post-btn'], $_POST['"id"']);
+        $id = $_POST['id'];
+        unset($_POST['edit-post-btn'], $_POST['id']);
         $_POST['user_id'] = 1;
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
-        $id = $_POST['"id"'];
+        // dump($_POST);
 
         $post_id = update($table, $id, $_POST);
         $_SESSION['message'] = 'Post Updated Successfully';
@@ -106,7 +107,7 @@ if(isset($_POST['edit-post-btn'])){
         $body = $_POST['body'];
         $topic_id = $_POST['topic_id'];
         $published = isset($_POST['published']) ? 1 : 0;
-        $image = '';
+        // $image = '';
     }
 
 

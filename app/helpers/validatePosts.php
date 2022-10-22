@@ -9,10 +9,6 @@ function validatePost($post, $errors){
         array_push($errors, 'Content is required');
     }
 
-    // if (empty($post["image"])) {
-    //     array_push($errors, 'Image is required');
-    // }
-
     if (empty($post["topic_id"])) {
         array_push($errors, 'Topic is required');
     }

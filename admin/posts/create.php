@@ -18,25 +18,28 @@ include(ROOT_PATH . "/app/controllers/posts.php")
       <h2>Add Post</h2>
 
       <form action="create.php" method="POST" class="form" novalidate>
+
+      <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
+
         <div class="form-group">
           <label for="post">Title</label>
-          <input type="text" class="form-control" id="post" name="title">
+          <input type="text" class="form-control" value="<?php echo $title?>" id="post" name="title">
         </div>
     
         <div class="form-group">
           <label for="description">Content</label>
-          <textarea class="form-control" id="description" rows="3" name="body"></textarea>
+          <textarea class="form-control" id="description" value="<?php echo $body?>" rows="3" name="body"></textarea>
         </div>
 
         <div class="form-group">
           <label for="image">Image</label>
-          <input type="file" class="form-control-file" id="image" name="image">
+          <input type="file" class="form-control-file" value="<?php echo $image?>" id="image" name="image">
         </div>
 
         <div class="form-group">
           <label for="topic">Topic</label>
           <select name="topic_id" class="form-control" id="topic">
-          <option value=""></option>
+          <option value=""><?php echo $topic_id?></option>
           <?php foreach ($topics as $key => $topic): ?>          
             <option value="<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></option>
           <?php endforeach ?>

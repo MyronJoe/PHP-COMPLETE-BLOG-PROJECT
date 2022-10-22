@@ -8,16 +8,29 @@ $topics = selectAll('topics');
 $posts = selectAll($table);
 
 $errors = [];
+$title = '';
+$body= '';
+$image = '';
+$topic_id = '';
 
 if(isset($_POST['post-btn'])){
-    unset($_POST['post-btn'], $_POST['topic_id']);
-    $_POST['user_id'] = 1;
-    $_POST['published'] = 1;
+    $errors = validatePost($_POST, $errors);
+    if (count($errors) === 0) {
+        unset($_POST['post-btn'], $_POST['topic_id']);
+        $_POST['user_id'] = 1;
+        $_POST['published'] = 1;
 
-    $post_id = create($table, $_POST);
-    $_SESSION['message'] = 'Post created successfully';
-    $_SESSION["type"] = "success";
-    header('location: '. BASE_URL . '/admin/posts/index.php');
+        $post_id = create($table, $_POST);
+        $_SESSION['message'] = 'Post created successfully';
+        $_SESSION["type"] = "success";
+        header('location: '. BASE_URL . '/admin/posts/index.php');
+        exit();
+    }else{
+        $title = $_POST['title'];
+        $body = $_POST['body'];
+        $image = $_POST['image'];
+        $topic_id = $_POST['topic_id'];
+    }
 }
 
 ?>

@@ -9,9 +9,9 @@ function validatePost($post, $errors){
         array_push($errors, 'Content is required');
     }
 
-    if (empty($post["image"])) {
-        array_push($errors, 'Image is required');
-    }
+    // if (empty($post["image"])) {
+    //     array_push($errors, 'Image is required');
+    // }
 
     if (empty($post["topic_id"])) {
         array_push($errors, 'Topic is required');
@@ -19,8 +19,8 @@ function validatePost($post, $errors){
 
 
     //checking if a Title already exist
-    $existingTopic= selectOne('posts', ['title' => $post["title"]]);
-    if($existingTopic){
+    $existingPost= selectOne('posts', ['title' => $post["title"]]);
+    if($existingPost){
         array_push($errors, 'Title already exists');
     }
     // dump($errors);

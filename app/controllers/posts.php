@@ -10,12 +10,11 @@ $posts = selectAll($table);
 $errors = [];
 $title = '';
 $body= '';
-$image = '';
 $topic_id = '';
 
 if(isset($_POST['post-btn'])){
     $errors = validatePost($_POST, $errors);
-    if (count($errors) === 0) {
+    if (count($errors) == 0) {
         unset($_POST['post-btn'], $_POST['topic_id']);
         $_POST['user_id'] = 1;
         $_POST['published'] = 1;
@@ -28,7 +27,6 @@ if(isset($_POST['post-btn'])){
     }else{
         $title = $_POST['title'];
         $body = $_POST['body'];
-        $image = $_POST['image'];
         $topic_id = $_POST['topic_id'];
     }
 }

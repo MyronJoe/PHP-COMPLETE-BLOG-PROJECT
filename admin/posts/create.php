@@ -28,20 +28,26 @@ include(ROOT_PATH . "/app/controllers/posts.php")
     
         <div class="form-group">
           <label for="description">Content</label>
-          <textarea class="form-control" id="description" value="<?php echo $body?>" rows="3" name="body"></textarea>
+          <textarea class="form-control" id="description" value="" rows="3" name="body"><?php echo $body?></textarea>
         </div>
 
         <div class="form-group">
           <label for="image">Image</label>
-          <input type="file" class="form-control-file" value="<?php echo $image?>" id="image" name="image">
+          <input type="file" class="form-control-file"  id="image" name="image">
         </div>
 
         <div class="form-group">
           <label for="topic">Topic</label>
           <select name="topic_id" class="form-control" id="topic">
-          <option value=""><?php echo $topic_id?></option>
-          <?php foreach ($topics as $key => $topic): ?>          
-            <option value="<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></option>
+          <option value=""></option>
+          <?php foreach ($topics as $key => $topic): ?> 
+            
+            <?php if (!empty($topic_id) && $topic_id == $topic['id']): ?>
+              <option selected value="<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></option>
+            <?php else: ?>
+              <option value="<?php echo $topic['id']; ?>"><?php echo $topic['name']; ?></option>
+            <?php endif; ?> 
+
           <?php endforeach ?>
             
           </select>

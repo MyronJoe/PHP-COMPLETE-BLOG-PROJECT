@@ -32,7 +32,7 @@ include(ROOT_PATH . "/app/controllers/posts.php")
                         <td>Myron</td>
                         <td class="d-flex justify-content-between">
                         
-                            <a href="<?php echo BASE_URL . '/admin/posts/edit.php'; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
+                            <a href="edit.php?id=<?php echo $post['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
                             
                             <a href="" class="btn btn-sm btn-danger mr-1">Delete</a>
                             

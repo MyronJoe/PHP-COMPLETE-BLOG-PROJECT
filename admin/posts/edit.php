@@ -37,7 +37,7 @@ include(ROOT_PATH . "/app/controllers/posts.php");
 
         <div class="form-group">
           <label for="image">Image</label>
-          <input type="file" class="form-control-file"  id="image" name="image">
+          <input type="file" value="<?php echo $image?>" class="form-control-file"  id="image" name="image">
         </div>
 
         <div class="form-group">

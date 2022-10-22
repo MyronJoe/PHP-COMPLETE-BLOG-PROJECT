@@ -95,7 +95,7 @@ if(isset($_POST['edit-post-btn'])){
         unset($_POST['edit-post-btn'], $_POST['id']);
         $_POST['user_id'] = 1;
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
-        // dump($_POST);
+        dump($_POST);
 
         $post_id = update($table, $id, $_POST);
         $_SESSION['message'] = 'Post Updated Successfully';
@@ -107,7 +107,7 @@ if(isset($_POST['edit-post-btn'])){
         $body = $_POST['body'];
         $topic_id = $_POST['topic_id'];
         $published = isset($_POST['published']) ? 1 : 0;
-        // $image = '';
+        
     }
 
 

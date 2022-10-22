@@ -24,24 +24,26 @@ include(ROOT_PATH . "/app/controllers/posts.php")
                     <th>Title</th>
                     <th>Author</th>
                     <th>Action</th>
+                    <th></th>
                 </tr>
                 <?php foreach ($posts as $key => $post): ?>
                     <tr>
                         <th scope="row"><?php echo $key + 1; ?></th>
                         <td><?php echo $post['title']; ?></td>
                         <td>Myron</td>
-                        <td class="d-flex justify-content-between">
+                        <td class="d-flex justify-content-around">
                         
                             <a href="edit.php?id=<?php echo $post['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
                             
                             <a href="index.php?del_id=<?php echo $post['id'] ?>" class="btn btn-sm btn-danger mr-1">Delete</a>
-                            
+                        </td>
+
+                        <td>
                             <?php if($post['published']): ?>
                                 <a href="" class="">Unpublish</a>
                             <?php else: ?>
                                 <a href="" class="">Publish</a>
                             <?php endif; ?>
-
                         </td>
 
                     </tr>         

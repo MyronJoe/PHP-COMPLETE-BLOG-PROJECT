@@ -81,6 +81,7 @@ if(isset($_POST['post-btn'])){
 }
 
 
+//edit functionality
 if(isset($_POST['edit-post-btn'])){
     
     $errors = validatePost($_POST, $errors);
@@ -106,7 +107,7 @@ if(isset($_POST['edit-post-btn'])){
         unset($_POST['edit-post-btn'], $_POST['id']);
         $_POST['user_id'] = 1;
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
-        dump($_POST);
+        // dump($_POST);
 
         $post_id = update($table, $id, $_POST);
         $_SESSION['message'] = 'Post Updated Successfully';

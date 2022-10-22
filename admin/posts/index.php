@@ -40,9 +40,9 @@ include(ROOT_PATH . "/app/controllers/posts.php")
 
                         <td>
                             <?php if($post['published']): ?>
-                                <a href="" class="">Unpublish</a>
+                                <a href="edit.php?published=0&p_id=<?php echo $post['id'] ?>" class="">Unpublish</a>
                             <?php else: ?>
-                                <a href="" class="">Publish</a>
+                                <a href="edit.php?published=1&p_id=<?php echo $post['id'] ?>" class="">Publish</a>
                             <?php endif; ?>
                         </td>
 

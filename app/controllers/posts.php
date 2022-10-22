@@ -38,6 +38,19 @@ if (isset($_GET['del_id'])) {
     exit();
 }
 
+//function for Published and Unpublished Post
+if (isset($_GET['published']) && isset($_GET['p_id'])) {
+    $published = $_GET['published'];
+    $p_id = $_GET['p_id'];
+
+    //updating the published post in the post table
+    $count = update($table, $p_id, ['published' => $published]);
+    $_SESSION['message'] = 'Post Publish State Changed';
+    $_SESSION["type"] = "success";
+    header('location: '. BASE_URL . '/admin/posts/index.php');
+    exit();
+}
+
 
 //add post funtinality
 if(isset($_POST['post-btn'])){

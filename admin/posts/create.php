@@ -54,8 +54,8 @@ include(ROOT_PATH . "/app/controllers/posts.php")
         </div>
 
         <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1">
-          <label class="form-check-label" for="exampleCheck1" name="published">Publish</label>
+          <input type="checkbox" class="form-check-input" id="exampleCheck1" name="published">
+          <label class="form-check-label" for="exampleCheck1" >Publish</label>
         </div>
 
         <button type="submit" name="post-btn" class="btn btn-primary my-2">Add Post</button>

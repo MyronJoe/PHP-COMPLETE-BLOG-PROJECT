@@ -42,10 +42,19 @@ include(ROOT_PATH . "/app/controllers/users.php");
         </div>
 
         <div class="form-group">
-          <label>
-          <input type="checkbox" name="admin">
-            Admin
-          </label>
+
+          <?php if (isset($admin) && $admin == 1):?>
+            <label>
+              <input type="checkbox" name="admin" checked>
+              Admin
+            </label>
+          <?php else:?>
+            <label>
+              <input type="checkbox" name="admin">
+              Admin
+            </label>
+          <?php endif;?>
+          
         </div>
 
         <button type="submit" name="create-admin" class="btn btn-primary my-2">Add User</button>

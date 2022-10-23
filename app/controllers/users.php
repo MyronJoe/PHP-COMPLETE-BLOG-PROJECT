@@ -5,11 +5,13 @@
 
     $errors = [];
     $username = '';
+    $admin = '';
     $email = '';
     $password = '';
     $confirmpass = '';
     $table = 'users';
 
+    $admin_users = selectAll($table, ['admin' => 1]);
 
     //function that logs the user in
     function loginUser($user){
@@ -61,6 +63,7 @@
             $email = $_POST["email"];
             $password = $_POST["password"];
             $confirmpass = $_POST["passwordconfirm"];
+            $admin = isset($_POST['admin']) ? 1 : 0;
         }
         // dump($user);
     }
@@ -86,6 +89,30 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
     }
+
+    //Delete admin functionality
+    if (isset($_GET['del_id'])) {
+        $id = $_GET['del_id'];
+        $count = delete($table, $id);
+        $_SESSION['message'] = 'Admin user was deleted successfully';
+        $_SESSION["type"] = "success";
+        header('location: '. BASE_URL . '/admin/users/index.php');
+        exit();
+    }
+
+    if (isset($_GET['id'])) {
+        $user = selectOne($table, ['id' => $_GET['id']]);
+        dump($user);
+        $username = $user["username"];
+        $email = $user["email"];
+        $password = $user["password"];
+        // $confirmpass = $user["passwordconfirm"];
+    }
+
+    // // edit admin user
+    // if (isset($_POST['update-user'])) {
+    //     dump($_POST);
+    // }
 
 
 

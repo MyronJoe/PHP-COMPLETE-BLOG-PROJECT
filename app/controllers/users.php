@@ -35,12 +35,13 @@
         
 
         if (count($errors) === 0) {
-            unset($_POST['passwordconfirm'], $_POST['register-btn']);
+            unset($_POST['passwordconfirm'], $_POST['register-btn'], $_POST['create-admin']);
             $_POST["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
             if ($_POST['admin']) {
                 $_POST['admin'] = 1;
-                $user = selectOne($table, ['id' => $user_id]);
+                // dump($_POST);
+                $user_id = create($table, $_POST);
                 $_SESSION['message'] = "Admin user created successfully";
                 $_SESSION['type'] = "success";
                 header("location: " . BASE_URL . "/admin/users/index.php");
@@ -53,9 +54,6 @@
                 // log user in after creating account
                 loginUser($user);
             }
-            
-            
-            
 
         }else{
 

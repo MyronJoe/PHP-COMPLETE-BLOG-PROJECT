@@ -1,7 +1,8 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,7 +50,7 @@
                                 <ul>
                                     <!-- checks if a user is an admin -->
                                     <?php if($_SESSION['admin']): ?>
-                                        <li><a href="<?php echo BASE_URL . 'admin/dashboard.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
+                                        <li><a href="<?php echo BASE_URL . 'admin/users/index.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
                                     <?php endif; ?>
                                     <!-- <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li> -->
 

@@ -16,6 +16,8 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
         <div class="adduser-sec">
             <h2>Manage Users</h2>
 
+            <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
+
             <table class="table mt-3">
                 <thead>
                     <tr>

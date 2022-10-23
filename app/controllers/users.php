@@ -10,6 +10,7 @@
     $password = '';
     $confirmpass = '';
     $table = 'users';
+    $id = '';
 
     $admin_users = selectAll($table, ['admin' => 1]);
 
@@ -102,17 +103,55 @@
 
     if (isset($_GET['id'])) {
         $user = selectOne($table, ['id' => $_GET['id']]);
-        dump($user);
+        // dump($user);
+
+        $id = $user['id'];
         $username = $user["username"];
         $email = $user["email"];
-        $password = $user["password"];
-        // $confirmpass = $user["passwordconfirm"];
+        $admin = isset($user['admin']) ? 1 : 0;
     }
 
-    // // edit admin user
-    // if (isset($_POST['update-user'])) {
-    //     dump($_POST);
-    // }
+    // edit admin user
+    if (isset($_POST['update-user'])) {
+        // $errors = validateUser($_POST, $errors);
+        
+        // $id = $_POST['id'];
+        // unset($_POST['update-user'], $_POST['id'], $_POST['passwordconfirm']);
+
+        // $user_id = update($table, $id, $_POST);
+        // $_SESSION['message'] = 'Admin user updated successfully';
+        // $_SESSION["type"] = "success";
+        // header('location: '. BASE_URL . '/admin/users/index.php');
+        // exit();
+
+        $errors = validateUser($_POST, $errors);
+        
+
+        if (count($errors) === 0) {
+            $id = $_POST['id'];
+            unset($_POST['update-user'], $_POST['id'], $_POST['passwordconfirm']);
+            $_POST["password"] = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
+            
+            $_POST['admin'] = isset($_POST['admin']) ? 1 : 0;
+            $count = update($table, $id, $_POST);
+            $_SESSION['message'] = "Admin user created successfully";
+            $_SESSION['type'] = "success";
+            header("location: " . BASE_URL . "/admin/users/index.php");
+            exit();
+           
+
+        }else{
+
+            $username = $_POST["username"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
+            $confirmpass = $_POST["passwordconfirm"];
+            $admin = isset($_POST['admin']) ? 1 : 0;
+        }
+
+        // dump($_POST);
+    }
 
 
 

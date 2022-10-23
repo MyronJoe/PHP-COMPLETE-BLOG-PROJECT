@@ -21,7 +21,7 @@ include(ROOT_PATH . "/app/controllers/users.php");
         <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
 
         <input type="hidden" class="form-control" name="id" value="<?php echo $id ?>">
-        
+
         <div class="form-group">
           <label for="username">Usernam</label>
           <input type="text" class="form-control" id="user" name="username" value="<?php echo $username ?>">
@@ -34,19 +34,28 @@ include(ROOT_PATH . "/app/controllers/users.php");
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password" value="<?php echo $password ?>">
+          <input type="password" class="form-control" id="password" name="password">
         </div>
 
         <div class="form-group">
           <label for="passwordconfirm">Password Confirm</label>
-          <input type="password" class="form-control" id="passwordconfirm" name="passwordconfirm" value="<?php echo $confirmpass ?>">
+          <input type="password" class="form-control" id="passwordconfirm" name="passwordconfirm">
         </div>
 
         <div class="form-group">
-          <label>
-          <input type="checkbox" name="admin">
-            Admin
-          </label>
+
+          <?php if (isset($admin) && $admin == 1):?>
+            <label>
+              <input type="checkbox" name="admin" checked>
+              Admin
+            </label>
+          <?php else:?>
+            <label>
+              <input type="checkbox" name="admin">
+              Admin
+            </label>
+          <?php endif;?>
+          
         </div>
 
         <button type="submit" name="update-user" class="btn btn-primary my-2">Update User</button>

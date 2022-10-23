@@ -1,6 +1,7 @@
 <?php
 require_once '../../path.php';
 include ROOT_PATH . '/admin/includes/adminheader.php';
+include(ROOT_PATH . "/app/controllers/users.php");
 ?>
 <section style="display: flex;">
   <div class="lside">
@@ -16,36 +17,38 @@ include ROOT_PATH . '/admin/includes/adminheader.php';
     <div class="adduser-sec">
       <h2>Add Users</h2>
 
-      <form action="" method="" class="form">
+      <form action="create.php" method="POST" class="form">
+
+      <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
+
         <div class="form-group">
           <label for="username">Usernam</label>
-          <input type="text" class="form-control" id="user" name="username">
+          <input type="text" class="form-control" id="user" name="username" value="<?php echo $username ?>">
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" name="email">
+          <input type="email" class="form-control" id="email" name="email" value="<?php echo $email ?>">
         </div>
 
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" name="password">
+          <input type="password" class="form-control" id="password" name="password" value="<?php echo $password ?>">
         </div>
 
         <div class="form-group">
           <label for="passwordconfirm">Password Confirm</label>
-          <input type="password" class="form-control" id="passwordconfirm" name="passwordconfirm">
+          <input type="password" class="form-control" id="passwordconfirm" name="passwordconfirm" value="<?php echo $confirmpass ?>">
         </div>
 
         <div class="form-group">
-          <label for="user">Role</label>
-          <select name="role" class="form-control" id="user">
-            <option value="author">Author</option>
-            <option value="user">User</option>
-          </select>
+          <label>
+          <input type="checkbox" name="admin">
+            Admin
+          </label>
         </div>
 
-        <button type="submit" class="btn btn-primary my-2">Add User</button>
+        <button type="submit" name="create-admin" class="btn btn-primary my-2">Add User</button>
       </form>
     </div>
 

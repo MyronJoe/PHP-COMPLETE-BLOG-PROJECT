@@ -6,9 +6,10 @@ include(ROOT_PATH . "/app/controllers/topics.php");
 // var_dump($_SESSION);
 $posts = [];
 
-$post_title = 'Reacent Post';
+$post_title = 'Recent Post';
 
 if (isset($_POST['search-term'])) {
+    $post_title = 'You searched for '. $_POST['search-term'];
     $posts = searchPost($_POST['search-term']);
 }else{
     $posts = $posts = getPublishedPost();
@@ -33,9 +34,11 @@ if (isset($_POST['search-term'])) {
             <!-------------------------------- Music section ------------------------------------>
             <div class="header_line">
                 <div class="header_title">
-                    <p><span><?php echo $post_title ?></span></p>
+                    <p><span>Search</span></p>
                 </div>
             </div>
+
+            <p style="font-size:20px; margin-bottom: 1em; font-weight:bold;"><span><?php echo $post_title ?></span></p>
 
             <div class="Music">
 

@@ -935,6 +935,15 @@ nav .logo.space {
     background-color: #fff;
     color: #040820;
   }
+  .header_titles {
+    width: 30%;
+    font-size: 16px;
+    padding: 7px;
+    transform: skewX(-23deg);
+    margin: auto;
+    background-color: #fff;
+    color: #040820;
+  }
 
   .header_title p span,
   .header_title_side p span {

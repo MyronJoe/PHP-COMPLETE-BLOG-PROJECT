@@ -1,16 +1,9 @@
 <?php
 require_once 'path.php';
-// session_start();
 include(ROOT_PATH . "/app/includes/header.php");
 include(ROOT_PATH . "/app/controllers/topics.php");
-// var_dump($_SESSION);
 
-
-
-// $getTopic = getPublishedPostUsernam();
-
-
-// dump($posts);
+$posts = $posts = getPublishedPost();
 
 ?>
 

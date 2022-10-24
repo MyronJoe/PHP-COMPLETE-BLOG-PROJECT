@@ -1,5 +1,5 @@
 <?php
-session_start()
+require_once(ROOT_PATH . "/app/includes/session.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">

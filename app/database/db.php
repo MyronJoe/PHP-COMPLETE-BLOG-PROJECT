@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    require_once(ROOT_PATH . "/app/includes/session.php");
     
     require 'connect.php';
 
@@ -22,7 +22,6 @@
         return $stmt;
     }
 
-    
     // function that select from db and also checks conditions to select
     function selectAll($table, $conditions = []){
         global $conn;

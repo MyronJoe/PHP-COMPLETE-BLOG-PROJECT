@@ -33,13 +33,14 @@ section{
   transition: all .5s ease;
   top: 73px;
 }
-.sidebar1 header {
+.sidebar1 header a{
   font-size: 22px;
   color: white;
   line-height: 70px;
   text-align: center;
   background: #063146;
   user-select: none;
+  display: block;
 }
 .sidebar1 ul a{
   display: block;

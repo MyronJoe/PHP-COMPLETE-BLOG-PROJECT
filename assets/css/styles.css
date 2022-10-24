@@ -176,6 +176,9 @@ img{
   list-style: none;
   margin-bottom: 2px;
 }
+.user_handel li:first-child {
+  margin-bottom: 12px;
+}
 
 .user_handel li a {
   color: white;

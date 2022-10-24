@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +48,7 @@ session_start();
                                 <ul>
                                     <!-- checks if a user is an admin -->
                                     <?php if($_SESSION['admin']): ?>
-                                        <li><a href="<?php echo BASE_URL . 'admin/dashboard.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
+                                        <li class="margin-bottom: 15px;"><a href="<?php echo BASE_URL . '/admin/dashboard.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-table-columns"></span>Dashboard</a></li>
                                     <?php endif; ?>
                                     <!-- <li><a href=""><span style="display: inline; margin-right:5px;" class="fas fa-user"></span>Profile</a></li> -->
 

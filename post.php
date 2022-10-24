@@ -1,8 +1,16 @@
-<?php require_once 'path.php'; ?>
-<?php include(ROOT_PATH . "/app/includes/header.php") 
 
+<?php require_once 'path.php';
+include(ROOT_PATH . "/app/includes/header.php") ;
+include(ROOT_PATH . "/app/controllers/posts.php");
+
+if(isset($_GET['id'])){
+    $post = selectOne('posts', ["id" => $_GET['id']]);
+    // dump($post);
+}
+
+$pageTitle = $post['title'];
 ?>
-
+<title><?php echo $pageTitle ?></title>
 
     <div class="content">
 
@@ -11,17 +19,17 @@
             <div class="left">
                 <!-------------------------------- Post section ------------------------------------>
                 <div class="post_sec">
+                    
                     <div class="post_topic">
                         <p>NEWS</p>
                     </div>
                     <div class="post_header">
-                        <h2>This is the header of this post and i like it that way</h2>
+                        <h2><?php echo $post['title'] ?></h2>
                     </div>
                     <div class="post_desc">
                         <div class="author">
                             <small>By <span style="color: red;">Joe Kachi</span></small>
-                            <small><span style="margin: 0 3px 0 10px;" class="fas fa-clock"></span>July 5, 2022 | 6:30
-                                AM</small>
+                            <small><span style="margin: 0 3px 0 10px;" class="fas fa-clock"></span><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
                         </div>
                         <div class="shear_it">
                             <ul>
@@ -34,62 +42,39 @@
                     </div>
                     <div class="post_body">
                         <div class="post_img">
-                            <img src="assets/images/IMG-20220519-WA0023.jpg" alt="">
+                            <img style="height: 450px;" src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="">
                         </div>
+
                         <div class="post_header">
-                            <small style="font-size: 14px;">This is the header of this post and i like it that
-                                way</small>
+                            <small style="font-size: 14px;"><?php echo $post['title'] ?></small>
                         </div>
+
                         <div class="post_cont"
                             style="line-height:23px; color:#4C4E4D; letter-spacing: 1px; font-size: 18px;">
-                            <p>Talented Nigerian amazing recording artist,<a
-                                    href="https://www.xclusivepop.com/Omah%20Lay/"><strong> Omah Lay</strong> </a>makes
-                                his musical debut with<strong> &#8220;Woman,&#8221;</strong> a new outstanding hit
-                                track.</p>
-                            <div class='code-block code-block-14'
-                                style='margin: 8px auto; text-align: center; display: block; clear: both;'>
-                                <div id='hbagency_space_3899'></div>
-                            </div>
 
-                            <p><strong>Woman</strong> is an<strong> Omah-Lay-</strong>style uptempo song with various
-                                hilarious lines over an entrancingly loud melody.</p>
-                            <p>Omah Lay releases an explicit track ahead of the June release of his highly anticipated
-                                album, &#8220;Boy Alone.&#8221;</p>
-                            <p>The news song &#8220;Woman&#8221; was written and produced by P Priime. It serves as <a
-                                    href="https://www.xclusivepop.com/Omah%20Lay/"><strong>Omah Lay&#8217;s</strong>
-                                </a>second official single of the year, released just before the album.</p>
-                            <p>Because the vocals were always in rhythm with the beat, one could conclude that this
-                                fascinating album is a true reflection of how amazing music should sound.</p>
-                            <p>Before his current Justin Bieber-assisted hit, <strong>&#8220;<a
-                                        href="https://www.xclusivepop.com/omah-lay-attention-ft-justin-bieber-audio-4/">Attention</a>,&#8221;</strong>
-                                Omah Lay&#8217;s debut studio album,<strong> &#8220;Boy Alone,&#8221;</strong> will be
-                                released.</p>
-                            <p><strong>&#8220;Omah Lay – Woman&#8221; Quotable Lyrics;</strong></p>
-                            <p><em>Say everything I do is for my woman</em><br />
-                                <em>(Aaaahhh)</em><br />
-                                <em>Anything at all wey you talk I go do am</em><br />
-                                <em>(Ooooooo)</em><br />
-                                <em>Me I no dey see another girl for my visuals</em><br />
-                                <em>(Eeehhhhh)</em><br />
-                                <em>Loving you Loving you na my ritual</em><br />
-                                <em>(Aaaahhhh)</em>
-                            </p>
+                            <?php echo $post['body'] ?>
+
                         </div>
+
                         <div class="downloa_sec" style="margin: 35px 0;">
                             <p><strong>Listen and share your thought below:</strong></p>
                             <p style="margin: 25px 0;"><strong><audio src="audio/Dremo-Monaco-(TrendyBeatz.com).mp3"
                                         controls="controls"></audio></strong></p>
 
                             <p><a href=""><strong style="color: #040820; font-size: 20px;">DOWNLOAD MP3</strong></a></p>
-
                         </div>
+
                     </div>
+
+
                     <div id="M811623ScriptRootC1323864">
                     </div>
                     <script data-cfasync="false"
                         src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                     <script src="https://jsc.adskeeper.com/x/c/xclusivepop.com.1323864.js" async>
                     </script>
+
+
                     <div class="recomended">
                         <!-------------------------------- recomended section ------------------------------------>
                         <div class="recomend">

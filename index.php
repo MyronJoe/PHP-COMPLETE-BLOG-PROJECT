@@ -7,7 +7,7 @@ $posts = $posts = getPublishedPost();
 
 ?>
 
-
+<title>Home</title>
 <div class="content">
 
     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>

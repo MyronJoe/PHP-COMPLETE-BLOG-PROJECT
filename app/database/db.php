@@ -6,7 +6,7 @@
     //funtion for texting - will be deleted
     function dump($value){
         echo '<pre>';
-            var_dump($value);
+            print_r($value);
         echo '</pre>';
         exit;
     }
@@ -131,8 +131,21 @@
         return $stmt->affected_rows;
     }
 
+    function getPublishedPost(){
+        global $conn;
 
+        $sql = "SELECT p.*, u.username FROM posts AS p JOIN users AS u ON p.user_id=u.id WHERE p.published = ?";
+        $stmt = executeQuery($sql, ['published' => 1]);
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
 
-    // $id = delete('users', 3);
-    // dump($id)
+    function getPublishedPostUsernam(){
+        global $conn;
+
+        $sql = "SELECT p.*, t.name FROM posts AS p JOIN topics AS t ON p.topic_id=t.id WHERE p.published = ?";
+        $stmt = executeQuery($sql, ['published' => 1]);
+        $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+        return $records;
+    }
 ?>

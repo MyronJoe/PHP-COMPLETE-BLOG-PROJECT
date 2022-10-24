@@ -35,7 +35,7 @@ $posts = $posts = getPublishedPost();
                         <div class="img_sec">
 
                             <div class="topic">
-                                <p><a href="#">Entertainment</a></p>
+                                <p><a href="#"><?php echo $post['topic_id'] ?></a></p>
                             </div>
                             <a href="#"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>

@@ -22,7 +22,15 @@ function validateUser($user, $errors){
     //checking if an email already exist
     $existingUser = selectOne('users', ['email' => $user["email"]]);
     if($existingUser){
-        array_push($errors, 'Email already exists');
+
+        if (isset($user['update-user']) && $existingUser['id'] != $user['id']) {
+            array_push($errors, 'Email already exists');
+        }
+
+        if (isset($user['register-btn']) || isset($user['create-admin']) ) {
+            array_push($errors, 'Email already exists');
+        }
+        
     }
 
     // dump($errors);

@@ -1,5 +1,5 @@
 <?php
-// session_start()
+session_start()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,14 +69,17 @@
 
     <div class="user">
       <ul>
-        <li class="handler">
-        <a href="">Myron Joe <span class="fa fa-user"></span></a>
-          <div class="submenu">
-              <ul style="top:30px; right:0px">
-                  <li><a href="<?php echo BASE_URL . '/logout.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
-              </ul>
-          </div>
-        </li>
+        <?php if(isset($_SESSION['username'])): ?>
+          <li class="handler">
+            <a href=""><?php echo $_SESSION['username'] ?><span class="fa fa-user"></span></a>
+            <div class="submenu">
+                <ul style="top:30px; right:0px">
+                    <li><a href="<?php echo BASE_URL . '/logout.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
+                </ul>
+            </div>
+          </li>
+        <?php endif; ?>
+        
       </ul>
     </div>
   </nav>

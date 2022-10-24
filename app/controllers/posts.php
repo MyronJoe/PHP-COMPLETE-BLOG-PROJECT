@@ -76,7 +76,7 @@ if(isset($_POST['post-btn'])){
      //Post upload
     if (count($errors) == 0) {
         unset($_POST['post-btn']);
-        $_POST['user_id'] = 1;
+        $_POST['user_id'] =  $_SESSION['id'];
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
 
 
@@ -118,7 +118,7 @@ if(isset($_POST['edit-post-btn'])){
     if (count($errors) == 0) {
         $id = $_POST['id'];
         unset($_POST['edit-post-btn'], $_POST['id']);
-        $_POST['user_id'] = 1;
+        $_POST['user_id'] = $_SESSION['id'];
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
         // dump($_POST);
 

@@ -5,14 +5,13 @@ include(ROOT_PATH . "/app/includes/header.php");
 include(ROOT_PATH . "/app/controllers/topics.php");
 // var_dump($_SESSION);
 
+
+
 // $getTopic = getPublishedPostUsernam();
-$posts = $posts = getPublishedPost();
+
 
 // dump($posts);
 
-if (isset($_POST['search-term'])) {
-    dump($_POST);
-}
 ?>
 
 

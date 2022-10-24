@@ -30,6 +30,34 @@ session_start()
         border: 2px solid #491217;;
         margin-bottom: 1em;
       }
+      .submenu ul{
+        display: none;
+        position: absolute;
+        background-color: white;
+        padding: 5px 10px 5px 0px;
+        transition: 2s ease-out;
+      }
+      .submenu ul li a{
+        color: #040820;
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .submenu ul li a:last-child{
+        margin-bottom: 0px;
+      }
+      .submenu ul li a:hover{
+        color: orangered
+
+      }
+      .handler{
+        position: relative;
+      }
+      .handler:hover .submenu ul{
+        display: block;
+        top: 20px;
+        
+      }
     </style>
   </head>
 </head>
@@ -40,6 +68,15 @@ session_start()
     </div>
 
     <div class="user">
-      <a href="">Myron Joe <span class="fa fa-user"></span></a>
+      <ul>
+        <li class="handler">
+        <a href="">Myron Joe <span class="fa fa-user"></span></a>
+          <div class="submenu">
+              <ul style="top:30px; right:0px">
+                  <li><a href="<?php echo BASE_URL . '/logout.php' ?>"><span style="display: inline; margin-right:5px;" class="fa-solid fa-arrow-right-from-bracket"></span>Logout</a></li>
+              </ul>
+          </div>
+        </li>
+      </ul>
     </div>
   </nav>

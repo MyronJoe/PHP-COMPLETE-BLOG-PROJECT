@@ -1,5 +1,7 @@
 <?php require_once 'path.php'; ?>
-<?php include(ROOT_PATH . "/app/includes/header.php") ?>
+<?php include(ROOT_PATH . "/app/includes/header.php") 
+
+?>
 
 
     <div class="content">

@@ -32,14 +32,14 @@ $posts = $posts = getPublishedPost();
                             <div class="topic">
                                 <p><a href="#"><?php echo $post['topic_id'] ?></a></p>
                             </div>
-                            <a href="#"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
+                            <a href="post.php?id=<?php echo $post['id']; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>
                         <div class="title_sec">
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <h2 class="title"><?php echo $post['title'] ?></h2>
                             </a>
 
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <p class="post_content">
                                     <?php echo substr($post['body'], 0, 120).'...'?>
                                 </p>
@@ -68,7 +68,7 @@ $posts = $posts = getPublishedPost();
 
                     <div class="card">
                         <div class="img_sec">
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <div class="Video_tag">
 
                                     <p><span class="fas fa-play"></p>
@@ -78,11 +78,11 @@ $posts = $posts = getPublishedPost();
                         </div>
 
                         <div class="title_sec">
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <h2 class="title"><?php echo $post['title'] ?></h2>
                             </a>
 
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <p class="post_content">
                                     <?php echo substr($post['body'], 0, 120).'...'?>
                                 </p>
@@ -115,14 +115,14 @@ $posts = $posts = getPublishedPost();
                             <div class="topic">
                                 <p><a href="#">Entertainment</a></p>
                             </div>
-                            <a href="#"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
+                            <a href="post.php?id=<?php echo $post['id']; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>
                         <div class="title_sec">
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <h2 class="title"><?php echo $post['title'] ?></h2>
                             </a>
 
-                            <a href="#">
+                            <a href="post.php?id=<?php echo $post['id']; ?>">
                                 <p class="post_content">
                                     <?php echo substr($post['body'], 0, 120).'...'?>
                                 </p>

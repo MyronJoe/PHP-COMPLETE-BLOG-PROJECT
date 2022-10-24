@@ -17,9 +17,16 @@ function validatePost($post, $errors){
     //checking if a Title already exist
     $existingPost= selectOne('posts', ['title' => $post["title"]]);
     if($existingPost){
-        array_push($errors, 'Title already exists');
+        if (isset($post['edit-post-btn']) && $existingPost['id'] != $post['id']) {
+            array_push($errors, 'Title already exists');
+        }
+
+        if (isset($post['post-btn'])) {
+            array_push($errors, 'Title already exists');
+        }
+        
     }
-    // dump($errors);
+
     return $errors;
 }
 

@@ -69,8 +69,8 @@ require_once(ROOT_PATH . "/app/includes/session.php");
 
 
             </nav>
-            <form action="#" class="nav_form mobile_nav">
-                <input type="search" class="search-data" placeholder="Search" required>
+            <form action="index.php" method="post" class="nav_form mobile_nav">
+                <input type="search" class="search-data" placeholder="Search..." name="search-term">
                 <button type="submit" class="fas fa-search"></button>
             </form>
 

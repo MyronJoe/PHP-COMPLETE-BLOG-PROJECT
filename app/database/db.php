@@ -140,11 +140,20 @@
         return $records;
     }
 
-    function getPublishedPostUsernam(){
+    // function getPublishedPostUsernam(){
+    //     global $conn;
+
+    //     $sql = "SELECT p.*, t.name FROM posts AS p JOIN topics AS t ON p.topic_id=t.id WHERE p.published = ?";
+    //     $stmt = executeQuery($sql, ['published' => 1]);
+    //     $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+    //     return $records;
+    // }
+
+    function searchPost($term){
         global $conn;
 
-        $sql = "SELECT p.*, t.name FROM posts AS p JOIN topics AS t ON p.topic_id=t.id WHERE p.published = ?";
-        $stmt = executeQuery($sql, ['published' => 1]);
+        $sql = "SELECT p.*, u.username FROM posts AS p JOIN users AS u ON p.user_id=u.id WHERE p.published = ? AND p.title LIKE %?% OR p.body LIKE %?%";
+        $stmt = executeQuery($sql, ['published' => 1, 'title' => $term, 'body' => $term]);
         $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         return $records;
     }

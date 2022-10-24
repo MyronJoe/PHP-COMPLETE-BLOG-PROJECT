@@ -113,16 +113,6 @@
 
     // edit admin user
     if (isset($_POST['update-user'])) {
-        // $errors = validateUser($_POST, $errors);
-        
-        // $id = $_POST['id'];
-        // unset($_POST['update-user'], $_POST['id'], $_POST['passwordconfirm']);
-
-        // $user_id = update($table, $id, $_POST);
-        // $_SESSION['message'] = 'Admin user updated successfully';
-        // $_SESSION["type"] = "success";
-        // header('location: '. BASE_URL . '/admin/users/index.php');
-        // exit();
 
         $errors = validateUser($_POST, $errors);
         

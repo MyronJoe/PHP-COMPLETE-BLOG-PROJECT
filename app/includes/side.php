@@ -1,3 +1,7 @@
+<?php
+require_once(ROOT_PATH . "/app/controllers/topics.php");
+$topics = selectAll('topics');
+?>
 <form action="#" class="nav_form desktop_nav">
     <input type="search" class="search-data" placeholder="Search" required>
     <button type="submit" class="fas fa-search"></button>
@@ -220,7 +224,7 @@
 <div >
     <ul class="tags"> 
     <?php foreach ($topics as $key => $topic): ?>
-        <li class="tag"><a href=""><?php echo $topic['name'] ?></a></li>
+        <li class="tag"><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topic['id'] . '&name=' . $topic['name']?>"><?php echo $topic['name'] ?></a></li>
     <?php endforeach ?>
     </ul>
 </div>

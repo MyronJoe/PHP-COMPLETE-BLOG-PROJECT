@@ -1,9 +1,9 @@
 <?php
 require_once 'path.php';
-// session_start();
+
 include(ROOT_PATH . "/app/includes/header.php");
 include(ROOT_PATH . "/app/controllers/topics.php");
-// var_dump($_SESSION);
+
 $posts = [];
 
 $post_title = 'Recent Post';
@@ -14,12 +14,6 @@ if (isset($_POST['search-term'])) {
 }else{
     $posts = $posts = getPublishedPost();
 }
-
-
-// $getTopic = getPublishedPostUsernam();
-
-
-// dump($posts);
 
 ?>
 

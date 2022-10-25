@@ -98,7 +98,6 @@ $posts = $posts = getPublishedPost();
                 </div>
             </div>
 
-
             <!-------------------------------- News section ------------------------------------>
             <div class="header_line">
                 <div class="header_title">

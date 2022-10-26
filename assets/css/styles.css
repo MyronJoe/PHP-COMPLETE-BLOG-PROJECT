@@ -7,15 +7,19 @@
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
 }
-img{
+
+img {
   object-fit: cover !important;
 }
-.form-error{
+
+.form-error {
   background-color: #ffb9d1;
-  padding:8px 10px;
-  border: 2px solid #491217;;
+  padding: 8px 10px;
+  border: 2px solid #491217;
+  ;
   margin-bottom: 1em;
 }
+
 /* body{
   background: #f2f2f2;
 } */
@@ -30,18 +34,21 @@ img{
 .m {
   margin: 10px;
 }
-.success{
+
+.success {
   color: #155724;
   background-color: #d4edda;
   border-color: #c3e6cb;
 }
-.danger{
+
+.danger {
   color: #491217;
   background-color: #ffb9d1;
-  padding:8px 10px;
+  padding: 8px 10px;
   border-color: #491217;
 }
-.tags{
+
+.tags {
   display: flex;
   /* justify-content: space-evenly; */
   list-style: none;
@@ -52,16 +59,19 @@ img{
   text-align: center;
   padding: 1em .8em;
 }
-.tag a{
+
+.tag a {
   background-color: white;
   display: block;
   padding: 8px 1em;
   border-radius: 4px;
   margin: 6px 4px;
 }
-.tag a:hover{
+
+.tag a:hover {
   background-color: rgb(212, 212, 212);
 }
+
 .newslater {
   /* height:170px; */
   background: #040820;
@@ -134,9 +144,10 @@ img{
   background: #1D2D73;
   padding: 13px;
   color: white;
-  
+
 }
-.submenu ul{
+
+.submenu ul {
   display: none;
   position: absolute;
   background-color: white;
@@ -144,23 +155,26 @@ img{
   top: 50px;
   transition: 2s ease-out;
 }
-.submenu ul li a{
+
+.submenu ul li a {
   color: #040820;
   display: inline-block;
   margin-bottom: 10px;
   font-weight: bold;
 }
-.submenu ul li a:last-child{
+
+.submenu ul li a:last-child {
   margin-bottom: 0px;
 }
-.submenu ul li a:hover{
-  color: orangered
 
+.submenu ul li a:hover {
+  color: orangered
 }
-.handler:hover .submenu ul{
+
+.handler:hover .submenu ul {
   display: block;
   top: 20px;
-  
+
 }
 
 .user_handel {
@@ -176,6 +190,7 @@ img{
   list-style: none;
   margin-bottom: 2px;
 }
+
 .user_handel li:first-child {
   margin-bottom: 12px;
 }
@@ -380,7 +395,7 @@ small {
 .mobile_title_sec,
 .title_sec {
   width: 70%;
-  padding: 1em 5px 5px ;
+  padding: 1em 5px 5px;
 }
 
 .mobile_title_sec a h4 {
@@ -634,7 +649,7 @@ small {
   .logo {
     font-size: 50px;
     font-weight: 700;
-    display:block;
+    display: block;
     text-align: center;
   }
 
@@ -932,6 +947,7 @@ nav .logo.space {
     background-color: #fff;
     color: #040820;
   }
+
   .header_titles {
     width: 30%;
     font-size: 16px;
@@ -977,8 +993,6 @@ nav .logo.space {
   .mobile_img_sec {
     margin-right: .5em;
   }
-
-
 }
 
 @media (max-width: 350px) {

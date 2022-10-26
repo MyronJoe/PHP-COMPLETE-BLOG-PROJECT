@@ -3,7 +3,8 @@ require_once 'path.php';
 include(ROOT_PATH . "/app/includes/header.php");
 include(ROOT_PATH . "/app/controllers/topics.php");
 
-$posts = $posts = getPublishedPost();
+$posts = getPublishedPost();
+
 
 ?>
 
@@ -26,11 +27,18 @@ $posts = $posts = getPublishedPost();
 
                 <?php foreach ($posts as $key => $post) : ?>
 
+                    <!-- function that fetches topics -->
+                    <?php 
+                        $topicId = $post['topic_id'];
+                        $topics = selectOne('topics', ['id' => $topicId]);
+                        // dump($topics);
+                    ?>
+
                     <div class="card">
                         <div class="img_sec">
 
                             <div class="topic">
-                                <p><a href="#"><?php echo $post['topic_id'] ?></a></p>
+                                <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topics['id'] . '&name=' . $topics['name']?>"><?php echo $topics['name'] ?></a></p>
                             </div>
                             <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>
@@ -108,11 +116,18 @@ $posts = $posts = getPublishedPost();
 
                 <?php foreach ($posts as $key => $post) : ?>
 
+                    <!-- function that fetches topics -->
+                    <?php 
+                        $topicId = $post['topic_id'];
+                        $topics = selectOne('topics', ['id' => $topicId]);
+                        // dump($topics);
+                    ?>
+
                     <div class="card">
                         <div class="img_sec">
 
                             <div class="topic">
-                                <p><a href="#">Entertainment</a></p>
+                                <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topics['id'] . '&name=' . $topics['name']?>"><?php echo $topics['name'] ?></a></p>
                             </div>
                             <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>

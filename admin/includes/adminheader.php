@@ -66,7 +66,6 @@ require_once(ROOT_PATH . "/app/includes/session.php");
     <div class="logo">
       <h3><a href="<?php echo BASE_URL . '/index.php'; ?>">MYRON-BLOG</a></h3>
     </div>
-
     <div class="user">
       <ul>
         <?php if(isset($_SESSION['username'])): ?>
@@ -79,7 +78,6 @@ require_once(ROOT_PATH . "/app/includes/session.php");
             </div>
           </li>
         <?php endif; ?>
-        
       </ul>
     </div>
   </nav>

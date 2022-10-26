@@ -7,6 +7,11 @@ $topics = selectAll('topics');
     <button type="submit" class="fas fa-search"></button>
 </form>
 
+<form action="search.php" method="post" class="nav_form desktop_nav">
+    <input type="search" class="search-data" placeholder="Search..." name="search-term">
+    <button type="submit" class="fas fa-search"></button>
+</form>
+
 
 <div class="top_stories">
     <div class="header_line">

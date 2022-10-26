@@ -4,7 +4,7 @@ include(ROOT_PATH . "/app/includes/header.php") ;
 include(ROOT_PATH . "/app/controllers/posts.php");
 
 $posts = $posts = getPublishedPost();
-// dump($posts);
+
 
 if(isset($_GET['id'])){
     $post = selectOne('posts', ["id" => $_GET['id']]);

@@ -1024,7 +1024,6 @@ nav .logo.space {
   left: 0;
   height: inherit;
   width: inherit;
-  /* background: #d35400; */
   border-radius: 50%;
   transform: scale(.9);
   z-index: -1;
@@ -1054,7 +1053,6 @@ nav .logo.space {
 .social-icon ul li a:hover:before {
   filter: blur(3px);
   transform: scale(1.2);
-  /* box-shadow: 0 0 15px #d35400; */
 }
 
 .social-icon ul li:nth-child(1):hover:before {

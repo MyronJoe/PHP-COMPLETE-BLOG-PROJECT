@@ -3,7 +3,7 @@
 include(ROOT_PATH . "/app/controllers/topics.php");
 
 if (isset($_GET['t_id'])) {
-    $post_title = 'You searched for '. $_GET['name'];
+    $post_title = 'You selected '. $_GET['name'] .' topic';
     $posts = getPostByTopics($_GET['t_id']);
     // dump($posts);
 }

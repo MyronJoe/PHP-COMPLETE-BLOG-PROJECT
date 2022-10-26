@@ -1,7 +1,7 @@
 
 <?php require_once 'path.php';
-include(ROOT_PATH . "/app/includes/header.php") ;
-include(ROOT_PATH . "/app/controllers/posts.php");
+require_once(ROOT_PATH . "/app/includes/header.php") ;
+require_once(ROOT_PATH . "/app/controllers/posts.php");
 
 $posts = $posts = getPublishedPost();
 

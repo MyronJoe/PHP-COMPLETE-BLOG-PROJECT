@@ -1,6 +1,6 @@
 <?php
-require_once(ROOT_PATH . "/app/controllers/topics.php");
-$topics = selectAll('topics');
+// require_once(ROOT_PATH . "/app/controllers/topics.php");
+// $topics = selectAll('topics');
 ?>
 
 <form action="search.php" method="post" class="nav_form desktop_nav">

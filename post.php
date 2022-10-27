@@ -108,7 +108,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
                                     <div class="img_sec">
 
                                         <div class="topic">
-                                            <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topicss['id'] . '&name=' . $topicss['name']?>"><?php echo $topicss['name'] ?></a></p>
+                                            <p><a href="#"><?php echo $topicss['name'] ?></a></p>
                                         </div>
                                         <a href="post.php?id=<?php echo $post['id']; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                                     </div>

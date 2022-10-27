@@ -11,6 +11,12 @@ if(isset($_GET['id'])){
 }
 
 $pageTitle = $post['title'];
+
+                   
+$topicId = $post['topic_id'];
+$topic = selectOne('topics', ['id' => $topicId]);
+// dump($topics);
+                    
 ?>
 <title><?php echo $pageTitle ?> | Myron-Blog</title>
 
@@ -23,7 +29,7 @@ $pageTitle = $post['title'];
                 <div class="post_sec">
                     
                     <div class="post_topic">
-                        <p>NEWS</p>
+                        <p><?php echo $topic['name'] ?></p>
                     </div>
                     <div class="post_header">
                         <h2><?php echo $post['title'] ?></h2>
@@ -90,11 +96,19 @@ $pageTitle = $post['title'];
 
                             <?php foreach ($posts as $key => $post) : ?>
 
+                                <!-- function that fetches topics -->
+                                <?php 
+                                    $topicId = $post['topic_id'];
+                                    $topicss = selectOne('topics', ['id' => $topicId]);
+                                    // dump($topics);
+                                ?>
+
+
                                 <div class="card">
                                     <div class="img_sec">
 
                                         <div class="topic">
-                                            <p><a href="#"><?php echo $post['topic_id'] ?></a></p>
+                                            <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topicss['id'] . '&name=' . $topicss['name']?>"><?php echo $topicss['name'] ?></a></p>
                                         </div>
                                         <a href="post.php?id=<?php echo $post['id']; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                                     </div>

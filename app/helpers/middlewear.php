@@ -21,7 +21,7 @@ function adminOnly($redirect = '/index.php'){
 
 
 function guestOnly($redirect = '/index.php'){
-    if (empty($_SESSION["id"])) {
+    if (!empty($_SESSION["id"])) {
         header('location: ' .BASE_URL . $redirect);
         exit();
     }

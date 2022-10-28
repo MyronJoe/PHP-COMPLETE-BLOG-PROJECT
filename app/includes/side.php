@@ -22,7 +22,7 @@
                 <p style="font-size: 13px;">1</p>
             </div>
             <a href="#">
-                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                <img src="assets/images/IMG-20220519-WA00023.jpeg" alt="NEWS">
             </a>
         </div>
         <div class="mobile_title_sec">
@@ -59,7 +59,7 @@
                 <p style="font-size: 13px;">3</p>
             </div>
             <a href="#">
-                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                <img src="assets/images/IMG-20220519-WA00023.jpeg" alt="NEWS">
             </a>
         </div>
         <div class="mobile_title_sec">
@@ -95,7 +95,7 @@
                 <p style="font-size: 13px;">5</p>
             </div>
             <a href="#">
-                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                <img src="assets/images/IMG-20220519-WA00023.jpeg" alt="NEWS">
             </a>
         </div>
         <div class="mobile_title_sec">
@@ -126,7 +126,7 @@
                 <p style="font-size: 13px;">1</p>
             </div>
             <a href="#">
-                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                <img src="assets/images/IMG-20220519-WA00023.jpeg" alt="NEWS">
             </a>
         </div>
         <div class="mobile_title_sec">
@@ -163,7 +163,7 @@
                 <p style="font-size: 13px;">3</p>
             </div>
             <a href="#">
-                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                <img src="assets/images/IMG-20220519-WA00023.jpeg" alt="NEWS">
             </a>
         </div>
         <div class="mobile_title_sec">
@@ -199,7 +199,7 @@
                 <p style="font-size: 13px;">5</p>
             </div>
             <a href="#">
-                <img src="assets/images/IMG-20220519-WA0023.jpg" alt="NEWS">
+                <img src="assets/images/IMG-20220519-WA00023.jpeg" alt="NEWS">
             </a>
         </div>
         <div class="mobile_title_sec">

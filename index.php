@@ -37,7 +37,7 @@ $posts = getPublishedPost();
                         <div class="img_sec">
 
                             <div class="topic">
-                                <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topics['id'] . '&name=' . $topics['name']?>"><?php echo $topics['name'] ?></a></p>
+                                <p><a href=""><?php echo $topics['name'] ?></a></p>
                             </div>
                             <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>
@@ -126,7 +126,7 @@ $posts = getPublishedPost();
                         <div class="img_sec">
 
                             <div class="topic">
-                                <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $topics['id'] . '&name=' . $topics['name']?>"><?php echo $topics['name'] ?></a></p>
+                                <p><a href=""><?php echo $topics['name'] ?></a></p>
                             </div>
                             <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>
@@ -153,11 +153,11 @@ $posts = getPublishedPost();
         </div>
         <!-------------------------------- Right side ------------------------------------>
         <div class="right">
-            <?php include("app/includes/side.php") ?>
+            <?php require("app/includes/side.php") ?>
 
         </div>
     </section>
 
 </div>
 
-<?php include(ROOT_PATH . "/app/includes/footer.php") ?>
+<?php require(ROOT_PATH . "/app/includes/footer.php") ?>

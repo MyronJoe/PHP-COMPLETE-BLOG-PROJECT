@@ -2,6 +2,7 @@
 require_once '../../path.php';
 include ROOT_PATH . '/admin/includes/adminheader.php';
 include(ROOT_PATH . "/app/controllers/posts.php");
+adminOnly()
 ?>
 <section style="display: flex;">
   <div class="lside">

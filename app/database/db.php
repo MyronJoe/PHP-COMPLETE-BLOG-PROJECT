@@ -140,15 +140,6 @@
         return $records;
     }
 
-    // function getPublishedPostUsernam(){
-    //     global $conn;
-
-    //     $sql = "SELECT p.*, t.name FROM posts AS p JOIN topics AS t ON p.topic_id=t.id WHERE p.published = ?";
-    //     $stmt = executeQuery($sql, ['published' => 1]);
-    //     $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
-    //     return $records;
-    // }
-
     function searchPost($term){
         global $conn;
 

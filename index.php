@@ -5,7 +5,6 @@ include(ROOT_PATH . "/app/controllers/topics.php");
 
 $posts = getPublishedPost();
 
-
 ?>
 
 <title>Home | Myron-Blog</title>

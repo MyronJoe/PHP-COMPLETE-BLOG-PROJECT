@@ -1,7 +1,8 @@
 <?php 
     require_once 'path.php';
     include(ROOT_PATH . "/app/controllers/users.php");
-    include(ROOT_PATH . "/app/includes/header.php"); 
+    include(ROOT_PATH . "/app/includes/header.php");
+    guestOnly();
 ?>
 
     <div class="container">

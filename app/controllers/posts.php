@@ -30,6 +30,7 @@ if (isset($_GET['id'])) {
 
 //Delete functionality
 if (isset($_GET['del_id'])) {
+    adminOnly();
     $id = $_GET['del_id'];
     $count = delete($table, $id);
     $_SESSION['message'] = 'Post was deleted successfully';
@@ -40,6 +41,7 @@ if (isset($_GET['del_id'])) {
 
 //function for Published and Unpublished Post
 if (isset($_GET['published']) && isset($_GET['p_id'])) {
+    adminOnly();
     $published = $_GET['published'];
     $p_id = $_GET['p_id'];
 
@@ -54,6 +56,7 @@ if (isset($_GET['published']) && isset($_GET['p_id'])) {
 
 //add post funtinality
 if(isset($_POST['post-btn'])){
+    adminOnly();
     // dump($_FILES['image']);
     $errors = validatePost($_POST, $errors);
     //image upload
@@ -96,7 +99,7 @@ if(isset($_POST['post-btn'])){
 
 //edit functionality
 if(isset($_POST['edit-post-btn'])){
-    
+    adminOnly();
     $errors = validatePost($_POST, $errors);
     
     if (!empty($_FILES['image']['name'])) {

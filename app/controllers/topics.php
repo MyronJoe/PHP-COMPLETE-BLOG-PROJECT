@@ -12,6 +12,7 @@
     $topics = selectAll($table);
 
     if (isset($_POST['add-topic'])) {
+        adminOnly();
         $errors = validateTopic($_POST, $errors);
         if (count($errors) === 0) {
             unset($_POST['add-topic']);
@@ -35,6 +36,7 @@
         
     }
     if (isset($_GET['del_id'])) {
+        adminOnly();
         $id = $_GET['del_id'];
         $count = delete($table, $id);
         $_SESSION['message'] = 'Topic was deleted successfully';
@@ -44,6 +46,7 @@
     }
 
     if (isset($_POST['edit-topic'])) {
+        adminOnly();
         $errors = validateTopic($_POST, $errors);
         if (count($errors) === 0) {
             $id = $_POST['id'];

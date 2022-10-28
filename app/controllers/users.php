@@ -93,6 +93,7 @@
 
     //Delete admin functionality
     if (isset($_GET['del_id'])) {
+        adminOnly();
         $id = $_GET['del_id'];
         $count = delete($table, $id);
         $_SESSION['message'] = 'Admin user was deleted successfully';
@@ -104,7 +105,6 @@
     if (isset($_GET['id'])) {
         $user = selectOne($table, ['id' => $_GET['id']]);
         // dump($user);
-
         $id = $user['id'];
         $username = $user["username"];
         $email = $user["email"];
@@ -113,7 +113,7 @@
 
     // edit admin user
     if (isset($_POST['update-user'])) {
-
+        adminOnly();
         $errors = validateUser($_POST, $errors);
         
 

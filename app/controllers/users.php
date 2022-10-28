@@ -12,7 +12,7 @@
     $table = 'users';
     $id = '';
 
-    $admin_users = selectAll($table, ['admin' => 1]);
+    $admin_users = selectAll($table);
 
     //function that logs the user in
     function loginUser($user){
@@ -108,7 +108,7 @@
         $id = $user['id'];
         $username = $user["username"];
         $email = $user["email"];
-        $admin = isset($user['admin']) ? 1 : 0;
+        $admin = $user['admin'];
     }
 
     // edit admin user

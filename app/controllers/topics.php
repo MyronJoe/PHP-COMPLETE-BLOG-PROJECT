@@ -1,6 +1,7 @@
 <?php
     include(ROOT_PATH . '/app/database/db.php');
     include(ROOT_PATH . '/app/helpers/validateTopics.php');
+    include(ROOT_PATH . '/app/helpers/middlewear.php');
 
     $table = 'topics';
 

@@ -15,7 +15,7 @@ $pageTitle = $post['title'];
                    
 $topicId = $post['topic_id'];
 $topic = selectOne('topics', ['id' => $topicId]);
-// dump($topics);
+
                     
 ?>
 <title><?php echo $pageTitle ?> | Myron-Blog</title>

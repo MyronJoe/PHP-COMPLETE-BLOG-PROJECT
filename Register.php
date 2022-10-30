@@ -4,8 +4,6 @@ include(ROOT_PATH . "/app/includes/header.php");
 guestOnly();
 
 ?>
-
-
     <div class="container">
 
         <div>

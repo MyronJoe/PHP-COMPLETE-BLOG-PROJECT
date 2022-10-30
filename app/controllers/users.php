@@ -125,7 +125,7 @@
             
             $_POST['admin'] = isset($_POST['admin']) ? 1 : 0;
             $count = update($table, $id, $_POST);
-            $_SESSION['message'] = "Admin user created successfully";
+            $_SESSION['message'] = "Admin user Updated successfully";
             $_SESSION['type'] = "success";
             header("location: " . BASE_URL . "/admin/users/index.php");
             exit();

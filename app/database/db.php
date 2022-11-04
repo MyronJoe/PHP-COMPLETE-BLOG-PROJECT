@@ -122,7 +122,7 @@
 
 
 
-    //here is the db update funtion
+    //here is the db delete funtion
     function delete($table, $id){
         global $conn;
         $sql = "DELETE FROM $table WHERE id=? ";

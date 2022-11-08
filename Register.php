@@ -7,7 +7,7 @@ guestOnly();
     <div class="container">
 
         <div>
-            <div class="form ">
+            <div class="form " style="height:90vh; margin-top:12em;">
                 <div class="top">
                     <h4 class="m-0 text-uppercase font-weight-bold text-light">Register</h4>
                 </div>

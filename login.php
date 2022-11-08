@@ -5,10 +5,10 @@
     guestOnly();
 ?>
 
-    <div class="container" style="position:relative; top:200px; height:100vh;">
+    <div class="container" >
 
         <div>
-            <div class="form ">
+            <div class="form " style="height:65vh; margin-top:12em;">
                 <div class="top">
                     <h4>Login</h4>
                 </div>

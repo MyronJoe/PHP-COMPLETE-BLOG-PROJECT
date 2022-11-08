@@ -34,7 +34,7 @@ $posts = getPublishedPost();
                     <!-- function that fetches topics -->
                     <?php 
                         $topicId = $post['topic_id'];
-                        $cat = selectOne('topics', ['id' => $topicId]);
+                        $category = selectOne('topics', ['id' => $topicId]);
                         // dump($topics);
                     ?>
 
@@ -42,7 +42,7 @@ $posts = getPublishedPost();
                         <div class="img_sec">
 
                             <div class="topic">
-                                <p><a href=""><?php echo $cat['name'] ?></a></p>
+                                <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name']?>"><?php echo $category['name'] ?></a></p>
                             </div>
                             <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                         </div>

@@ -628,14 +628,15 @@ small {
 
 }
 
-
 @media (max-width: 1140px) {
   nav {
     padding: 0px;
     width: 100%;
 
   }
-
+  .submenu ul {
+    right: 10px;
+  }
   .containerr,
   .content {
     width: 100%;
@@ -737,7 +738,6 @@ nav .logo.space {
   nav .search-icon1 {
     margin: 0 20px;
   }
-
   .nav_form {
     right: 30px;
   }

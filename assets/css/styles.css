@@ -20,9 +20,17 @@ img {
   margin-bottom: 1em;
 }
 
-/* body{
-  background: #f2f2f2;
-} */
+.containerr1{
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 100%;
+  top: 0;
+}
+.content{
+  position: relative;
+  top: 160px;
+}
 .post_cont p {
   margin-bottom: 1rem;
 }
@@ -640,7 +648,6 @@ small {
   .containerr,
   .content {
     width: 100%;
-
   }
 
   .user_handel {

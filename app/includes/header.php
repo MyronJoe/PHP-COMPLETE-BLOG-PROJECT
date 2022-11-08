@@ -20,7 +20,7 @@ require_once(ROOT_PATH . "/app/includes/session.php");
 
 <body>
 
-    <div class="containerr">
+    <div class="containerr1">
 
         <div class="hero">
             <div class="logo">

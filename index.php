@@ -8,12 +8,13 @@ $posts = getPublishedPost();
 ?>
 
 <title>Home | Myron-Blog</title>
+    
+
+<div class="content">
     <form action="search.php" method="post" class="nav_form mobile_nav">
         <input type="search" class="search-data" placeholder="Search..." name="search-term">
         <button type="submit" class="fas fa-search"></button>
     </form>
-
-<div class="content">
 
     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
 
@@ -162,7 +163,8 @@ $posts = getPublishedPost();
 
         </div>
     </section>
+    
+    <?php require(ROOT_PATH . "/app/includes/footer.php") ?>
 
 </div>
 
-<?php require(ROOT_PATH . "/app/includes/footer.php") ?>

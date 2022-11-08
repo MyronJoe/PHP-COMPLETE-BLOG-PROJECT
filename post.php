@@ -20,6 +20,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
 ?>
 <title><?php echo $pageTitle ?> | Myron-Blog</title>
 
+<div class="content1" style="top: 180px;">
     <div class="content">
 
         <section>
@@ -146,4 +147,6 @@ $topic = selectOne('topics', ['id' => $topicId]);
 
     </div>
     
-    <?php include(ROOT_PATH . "/app/includes/footer.php") ?> 
+    <?php include(ROOT_PATH . "/app/includes/footer.php") ?>
+
+</div>

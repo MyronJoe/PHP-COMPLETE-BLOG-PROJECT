@@ -10,6 +10,7 @@ if (isset($_GET['t_id'])) {
 
 ?>
 
+<div class="content1" style="top: 180px;">
     <div class="content">
 
         <section>
@@ -58,3 +59,5 @@ if (isset($_GET['t_id'])) {
     </div>
     
     <?php include(ROOT_PATH . "/app/includes/footer.php") ?> 
+
+</div>

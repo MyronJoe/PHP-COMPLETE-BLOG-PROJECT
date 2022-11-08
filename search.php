@@ -18,7 +18,9 @@ if (isset($_POST['search-term'])) {
 ?>
 
 
-<div class="content">
+<div class="content1" style="top: 180px;">
+
+<div class="content" >
 
     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
 
@@ -78,3 +80,5 @@ if (isset($_POST['search-term'])) {
 </div>
 
 <?php include(ROOT_PATH . "/app/includes/footer.php") ?>
+
+</div>

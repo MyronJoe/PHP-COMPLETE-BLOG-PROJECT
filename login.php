@@ -5,7 +5,7 @@
     guestOnly();
 ?>
 
-    <div class="container">
+    <div class="container" style="position:relative; top:200px; height:100vh;">
 
         <div>
             <div class="form ">
@@ -36,8 +36,10 @@
                 </form>
 
             </div>
+            <?php include(ROOT_PATH . "/app/includes/footer.php") ?> 
         </div>
 
+        
     </div>
     
-    <?php include(ROOT_PATH . "/app/includes/footer.php") ?> 
+    

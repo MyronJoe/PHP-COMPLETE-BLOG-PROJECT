@@ -9,162 +9,164 @@ $posts = getPublishedPost();
 
 <title>Home | Myron-Blog</title>
     
+<div class="content1"  style="top: 180px;">
 
-<div class="content">
-    <form action="search.php" method="post" class="nav_form mobile_nav">
-        <input type="search" class="search-data" placeholder="Search..." name="search-term">
-        <button type="submit" class="fas fa-search"></button>
-    </form>
+    <div class="content">
+        <form action="search.php" method="post" class="nav_form mobile_nav">
+            <input type="search" class="search-data" placeholder="Search..." name="search-term">
+            <button type="submit" class="fas fa-search"></button>
+        </form>
 
-    <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
+        <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
 
-    <section>
-        <!-------------------------------- Left side ------------------------------------>
-        <div class="left">
-            <!-------------------------------- Music section ------------------------------------>
-            <div class="header_line">
-                <div class="header_title">
-                    <p><span>Lastest Song</span></p>
+        <section>
+            <!-------------------------------- Left side ------------------------------------>
+            <div class="left">
+                <!-------------------------------- Music section ------------------------------------>
+                <div class="header_line">
+                    <div class="header_title">
+                        <p><span>Lastest Song</span></p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="Music">
+                <div class="Music">
 
-                <?php foreach ($posts as $key => $post) : ?>
+                    <?php foreach ($posts as $key => $post) : ?>
 
-                    <!-- function that fetches topics -->
-                    <?php 
-                        $topicId = $post['topic_id'];
-                        $category = selectOne('topics', ['id' => $topicId]);
-                        // dump($topics);
-                    ?>
+                        <!-- function that fetches topics -->
+                        <?php 
+                            $topicId = $post['topic_id'];
+                            $category = selectOne('topics', ['id' => $topicId]);
+                            // dump($topics);
+                        ?>
 
-                    <div class="card">
-                        <div class="img_sec">
+                        <div class="card">
+                            <div class="img_sec">
+
+                                <div class="topic">
+                                    <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name']?>"><?php echo $category['name'] ?></a></p>
+                                </div>
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
+                            </div>
+                            <div class="title_sec">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <h2 class="title"><?php echo $post['title'] ?></h2>
+                                </a>
+
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <p class="post_content">
+                                        <?php echo substr($post['body'], 0, 120).'...'?>
+                                    </p>
+                                </a>
+                                <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
+
+
+
+                    <div class="more">
+                        <a href="">More Songs</a>
+                    </div>
+                </div>
+                <!-------------------------------- Video Section ------------------------------------>
+                <div class="header_line">
+                    <div class="header_title">
+                        <p><span>Lastest Video</span></p>
+                    </div>
+                </div>
+                <div class="Video">
+
+                    <?php foreach ($posts as $key => $post) : ?>
+
+                        <div class="card">
+                            <div class="img_sec">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <div class="Video_tag">
+
+                                        <p><span class="fas fa-play"></p>
+                                    </div>
+                                    <img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>">
+                                </a>
+                            </div>
+
+                            <div class="title_sec">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <h2 class="title"><?php echo $post['title'] ?></h2>
+                                </a>
+
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <p class="post_content">
+                                        <?php echo substr($post['body'], 0, 120).'...'?>
+                                    </p>
+                                </a>
+                                <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
+                            </div>
+                        </div>
+
+                    <?php endforeach; ?>
+
+                    <div class="more">
+                        <a href="">More Videos</a>
+                    </div>
+                </div>
+
+                <!-------------------------------- News section ------------------------------------>
+                <div class="header_line">
+                    <div class="header_title">
+                        <p><span>Lastest News</span></p>
+                    </div>
+                </div>
+                <div class="NEWS">
+
+                    <?php foreach ($posts as $key => $post) : ?>
+
+                        <!-- function that fetches topics -->
+                        <?php 
+                            $topicId = $post['topic_id'];
+                            $category = selectOne('topics', ['id' => $topicId]);
+                            // dump($topics);
+                        ?>
+
+                        <div class="card">
+                            <div class="img_sec">
 
                             <div class="topic">
                                 <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name']?>"><?php echo $category['name'] ?></a></p>
                             </div>
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
-                        </div>
-                        <div class="title_sec">
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <h2 class="title"><?php echo $post['title'] ?></h2>
-                            </a>
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
+                            </div>
+                            <div class="title_sec">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <h2 class="title"><?php echo $post['title'] ?></h2>
+                                </a>
 
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <p class="post_content">
-                                    <?php echo substr($post['body'], 0, 120).'...'?>
-                                </p>
-                            </a>
-                            <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                    <p class="post_content">
+                                        <?php echo substr($post['body'], 0, 120).'...'?>
+                                    </p>
+                                </a>
+                                <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
+                            </div>
                         </div>
+
+                    <?php endforeach; ?>
+                    <div class="more">
+                        <a href="">More News</a>
                     </div>
-
-                <?php endforeach; ?>
-
-
-
-                <div class="more">
-                    <a href="">More Songs</a>
                 </div>
+
             </div>
-            <!-------------------------------- Video Section ------------------------------------>
-            <div class="header_line">
-                <div class="header_title">
-                    <p><span>Lastest Video</span></p>
-                </div>
+            <!-------------------------------- Right side ------------------------------------>
+            <div class="right">
+                <?php require("app/includes/side.php") ?>
+
             </div>
-            <div class="Video">
+        </section>
 
-                <?php foreach ($posts as $key => $post) : ?>
+    </div>
 
-                    <div class="card">
-                        <div class="img_sec">
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <div class="Video_tag">
-
-                                    <p><span class="fas fa-play"></p>
-                                </div>
-                                <img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>">
-                            </a>
-                        </div>
-
-                        <div class="title_sec">
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <h2 class="title"><?php echo $post['title'] ?></h2>
-                            </a>
-
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <p class="post_content">
-                                    <?php echo substr($post['body'], 0, 120).'...'?>
-                                </p>
-                            </a>
-                            <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
-                        </div>
-                    </div>
-
-                <?php endforeach; ?>
-
-                <div class="more">
-                    <a href="">More Videos</a>
-                </div>
-            </div>
-
-            <!-------------------------------- News section ------------------------------------>
-            <div class="header_line">
-                <div class="header_title">
-                    <p><span>Lastest News</span></p>
-                </div>
-            </div>
-            <div class="NEWS">
-
-                <?php foreach ($posts as $key => $post) : ?>
-
-                    <!-- function that fetches topics -->
-                    <?php 
-                        $topicId = $post['topic_id'];
-                        $category = selectOne('topics', ['id' => $topicId]);
-                        // dump($topics);
-                    ?>
-
-                    <div class="card">
-                        <div class="img_sec">
-
-                        <div class="topic">
-                            <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name']?>"><?php echo $category['name'] ?></a></p>
-                        </div>
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
-                        </div>
-                        <div class="title_sec">
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <h2 class="title"><?php echo $post['title'] ?></h2>
-                            </a>
-
-                            <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
-                                <p class="post_content">
-                                    <?php echo substr($post['body'], 0, 120).'...'?>
-                                </p>
-                            </a>
-                            <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
-                        </div>
-                    </div>
-
-                <?php endforeach; ?>
-                <div class="more">
-                    <a href="">More News</a>
-                </div>
-            </div>
-
-        </div>
-        <!-------------------------------- Right side ------------------------------------>
-        <div class="right">
-            <?php require("app/includes/side.php") ?>
-
-        </div>
-    </section>
-    
     <?php require(ROOT_PATH . "/app/includes/footer.php") ?>
-
 </div>
 

@@ -81,11 +81,9 @@ adminOnly();
   </nav>
 
 
-  <section class="">
+  <section >
 
-
-
-    <h2>MyronBlog - Dashboard</h2>
+    <h2 style="text-align: center ;">MyronBlog - Dashboard</h2>
 
 
   </section>

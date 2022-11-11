@@ -53,9 +53,9 @@ body {
   border-top: 1px solid rgba(255,255,255,.1);
   transition: .4s;
 }
-/* ul li:hover a{
+.sidebar1 ul li:hover a{
   padding-left: 50px;
-} */
+}
 
 .links ul{
   display: flex;
@@ -166,5 +166,13 @@ nav a:hover{
 @media screen and (max-width:924px) {
   .table{
     width: 100% !important;
+  }
+  nav{
+    background-color: #042331;
+    padding: .8em 1em;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
   }
 }

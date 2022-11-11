@@ -81,17 +81,11 @@ adminOnly();
   </nav>
 
 
-  <section style="display: flex;">
+  <section class="">
 
 
 
     <h2>MyronBlog - Dashboard</h2>
-
-
-
-
-
-
 
 
   </section>

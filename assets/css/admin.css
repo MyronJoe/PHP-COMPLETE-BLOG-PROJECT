@@ -55,8 +55,13 @@ section{
   border-top: 1px solid rgba(255,255,255,.1);
   transition: .4s;
 }
-ul li:hover a{
+/* ul li:hover a{
   padding-left: 50px;
+} */
+
+.links ul{
+  display: flex;
+  padding: .5em;
 }
 .sidebar1 ul a i{
   margin-right: 16px;

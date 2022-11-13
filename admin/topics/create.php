@@ -6,7 +6,7 @@ adminOnly()
 ?>
 <section style="display: flex;">
   <div class="lside">
-  <?php include ROOT_PATH . '/admin/includes/adminsidbar.php';?>
+    <?php include ROOT_PATH . '/admin/includes/adminsidbar.php'; ?>
   </div>
 
   <div class="rside">
@@ -19,13 +19,13 @@ adminOnly()
       <h2>Add Topic</h2>
       <form action="<?php echo BASE_URL . '/admin/topics/create.php'; ?>" method="POST" class="form" novalidate>
 
-      <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
+        <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
 
         <div class="form-group">
           <label for="topic">Name</label>
-          <input type="text" class="form-control" value="<?php echo $name?>" id="topic" name="name">
+          <input type="text" class="form-control" value="<?php echo $name ?>" id="topic" name="name">
         </div>
-    
+
         <div class="form-group">
           <label for="description">Description</label>
           <textarea class="form-control" id="description" value="<?php echo $description ?>" rows="3" name="description"></textarea>

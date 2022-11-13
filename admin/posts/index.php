@@ -27,27 +27,27 @@ adminOnly()
                     <th>Action</th>
                     <th></th>
                 </tr>
-                <?php foreach ($posts as $key => $post): ?>
+                <?php foreach ($posts as $key => $post) : ?>
                     <tr>
                         <th scope="row"><?php echo $key + 1; ?></th>
                         <td><?php echo $post['title']; ?></td>
                         <td>Myron</td>
                         <td class="d-flex justify-content-around">
-                        
+
                             <a href="edit.php?id=<?php echo $post['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                            
+
                             <a href="index.php?del_id=<?php echo $post['id'] ?>" class="btn btn-sm btn-danger mr-1">Delete</a>
                         </td>
 
                         <td>
-                            <?php if($post['published']): ?>
+                            <?php if ($post['published']) : ?>
                                 <a href="edit.php?published=0&p_id=<?php echo $post['id'] ?>" class="">Unpublish</a>
-                            <?php else: ?>
+                            <?php else : ?>
                                 <a href="edit.php?published=1&p_id=<?php echo $post['id'] ?>" class="">Publish</a>
                             <?php endif; ?>
                         </td>
 
-                    </tr>         
+                    </tr>
                 <?php endforeach ?>
             </table>
 

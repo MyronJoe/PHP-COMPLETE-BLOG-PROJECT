@@ -20,7 +20,7 @@ adminOnly()
             <h2>Manage Topics</h2>
 
             <table class="table mt-3">
-                
+
                 <div class="table">
 
                     <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
@@ -37,20 +37,20 @@ adminOnly()
                 </thead>
                 <tbody>
 
-                    <?php foreach ($topics as $key => $topic): ?>
-                        
+                    <?php foreach ($topics as $key => $topic) : ?>
+
                         <tr>
                             <th scope="row"><?php echo $key + 1 ?></th>
                             <td><?php echo $topic['name'] ?></td>
                             <td>
-                            <a href="edit.php?id=<?php echo $topic['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
+                                <a href="edit.php?id=<?php echo $topic['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
                                 <a href="index.php?del_id=<?php echo $topic['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
 
                     <?php endforeach ?>
 
-                    
+
                     <!-- <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>

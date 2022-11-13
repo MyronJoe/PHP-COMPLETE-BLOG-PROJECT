@@ -14,34 +14,38 @@ adminOnly();
   <title>Myron-Blog</title>
 
   <style>
-    .submenu ul{
-        display: none;
-        position: absolute;
-        background-color: white;
-        padding: 5px 10px 5px 0px;
-        transition: 2s ease-out;
-      }
-      .submenu ul li a{
-        color: #040820;
-        display: inline-block;
-        margin-bottom: 10px;
-        font-weight: bold;
-      }
-      .submenu ul li a:last-child{
-        margin-bottom: 0px;
-      }
-      .submenu ul li a:hover{
-        color: orangered
+    .submenu ul {
+      display: none;
+      position: absolute;
+      background-color: white;
+      padding: 5px 10px 5px 0px;
+      transition: 2s ease-out;
+    }
 
-      }
-      .handler{
-        position: relative;
-      }
-      .handler:hover .submenu ul{
-        display: block;
-        top: 20px;
-        
-      }
+    .submenu ul li a {
+      color: #040820;
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .submenu ul li a:last-child {
+      margin-bottom: 0px;
+    }
+
+    .submenu ul li a:hover {
+      color: orangered
+    }
+
+    .handler {
+      position: relative;
+    }
+
+    .handler:hover .submenu ul {
+      display: block;
+      top: 20px;
+
+    }
   </style>
 </head>
 
@@ -81,7 +85,7 @@ adminOnly();
   </nav>
 
 
-  <section >
+  <section>
 
     <h2 style="text-align: center ;">MyronBlog - Dashboard</h2>
 

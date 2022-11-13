@@ -6,7 +6,7 @@ adminOnly()
 ?>
 <section style="display: flex;">
   <div class="lside">
-  <?php include ROOT_PATH . '/admin/includes/adminsidbar.php';?>
+    <?php include ROOT_PATH . '/admin/includes/adminsidbar.php'; ?>
   </div>
 
   <div class="rside">
@@ -20,7 +20,7 @@ adminOnly()
 
       <form action="create.php" method="POST" class="form">
 
-      <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
+        <?php include(ROOT_PATH . "/app/helpers/formerrors.php") ?>
 
         <div class="form-group">
           <label for="username">Usernam</label>
@@ -44,18 +44,18 @@ adminOnly()
 
         <div class="form-group">
 
-          <?php if (isset($admin) && $admin == 1):?>
+          <?php if (isset($admin) && $admin == 1) : ?>
             <label>
               <input type="checkbox" name="admin" checked>
               Admin
             </label>
-          <?php else:?>
+          <?php else : ?>
             <label>
               <input type="checkbox" name="admin">
               Admin
             </label>
-          <?php endif;?>
-          
+          <?php endif; ?>
+
         </div>
 
         <button type="submit" name="create-admin" class="btn btn-primary my-2">Add User</button>

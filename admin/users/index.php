@@ -28,18 +28,18 @@ adminOnly();
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($admin_users as $key => $user): ?>
-                      
-                            <tr>
-                                <th scope="row"><?php echo $key + 1?></th>
-                                <td><?php echo $user['username'] ?></td>
-                                <td><?php echo $user['email'] ?></td>
-                                <td>
-                                    <a href="edit.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                                    <a href="index.php?del_id=<?php echo $user['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
-                                </td>
-                            </tr>
-                     
+                    <?php foreach ($admin_users as $key => $user) : ?>
+
+                        <tr>
+                            <th scope="row"><?php echo $key + 1 ?></th>
+                            <td><?php echo $user['username'] ?></td>
+                            <td><?php echo $user['email'] ?></td>
+                            <td>
+                                <a href="edit.php?id=<?php echo $user['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
+                                <a href="index.php?del_id=<?php echo $user['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+
                     <?php endforeach; ?>
                 </tbody>
             </table>

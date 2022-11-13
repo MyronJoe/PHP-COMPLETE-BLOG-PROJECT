@@ -20,17 +20,19 @@ img {
   margin-bottom: 1em;
 }
 
-.containerr1{
+.containerr1 {
   position: fixed;
   z-index: 500;
   background-color: white;
   width: 100%;
   top: 0;
 }
-.content1{
+
+.content1 {
   position: relative;
   top: 160px;
 }
+
 .post_cont p {
   margin-bottom: 1rem;
 }
@@ -642,9 +644,11 @@ small {
     width: 100%;
 
   }
+
   .submenu ul {
     right: 10px;
   }
+
   .containerr,
   .content {
     width: 100%;
@@ -745,6 +749,7 @@ nav .logo.space {
   nav .search-icon1 {
     margin: 0 20px;
   }
+
   .nav_form {
     right: 30px;
   }

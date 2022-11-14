@@ -1,27 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
-*{
+
+* {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
 }
+
 body {
   font-family: 'Roboto', sans-serif;
 }
 
-.rside{
+.rside {
   padding: 1em;
   width: 100%;
 }
-.rside-top{
+
+.rside-top {
   float: right;
 }
-.adduser-sec{
+
+.adduser-sec {
   margin-top: 3em;
 }
-.adduser-sec h2{
+
+.adduser-sec h2 {
   text-align: center;
 }
+
 .sidebar1 {
   position: fixed;
   left: -250px;
@@ -31,7 +37,8 @@ body {
   transition: all .5s ease;
   top: 73px;
 }
-.sidebar1 header a{
+
+.sidebar1 header a {
   font-size: 22px;
   color: white;
   line-height: 70px;
@@ -40,7 +47,8 @@ body {
   user-select: none;
   display: block;
 }
-.sidebar1 ul a{
+
+.sidebar1 ul a {
   display: block;
   height: 100%;
   width: 100%;
@@ -50,38 +58,46 @@ body {
   padding-left: 40px;
   box-sizing: border-box;
   border-bottom: 1px solid black;
-  border-top: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255, 255, 255, .1);
   transition: .4s;
 }
-.sidebar1 ul li:hover a{
+
+.sidebar1 ul li:hover a {
   padding-left: 50px;
 }
 
-.links ul{
+.links ul {
   display: flex;
   padding: .5em;
 }
-.links ul li{
-  padding:  0 1em;
+
+.links ul li {
+  padding: 0 1em;
 }
-section{
+
+section {
   text-align: center;
   padding: 1em;
 }
-.sidebar1 ul a i{
+
+.sidebar1 ul a i {
   margin-right: 16px;
 }
-#check1{
+
+#check1 {
   display: none;
 }
-label #btn,label #cancel{
+
+label #btn,
+label #cancel {
   position: absolute;
   background: #042331;
   border-radius: 3px;
   cursor: pointer;
-  
+
 }
-label #btn{
+
+label #btn {
   left: 40px;
   top: 83px;
   font-size: 35px;
@@ -89,7 +105,8 @@ label #btn{
   padding: 6px 12px;
   transition: all .5s;
 }
-label #cancel{
+
+label #cancel {
   z-index: 1111;
   left: -165px;
   top: 90px;
@@ -98,20 +115,25 @@ label #cancel{
   padding: 4px 9px;
   transition: all .5s ease;
 }
-#check1:checked ~ .sidebar1{
+
+#check1:checked~.sidebar1 {
   left: 0;
 }
-#check1:checked ~ label #btn{
+
+#check1:checked~label #btn {
   left: 250px;
   opacity: 0;
   pointer-events: none;
 }
-#check1:checked ~ label #cancel{
+
+#check1:checked~label #cancel {
   left: 170px;
 }
-#check1:checked ~ section{
+
+#check1:checked~section {
   margin-left: 250px;
 }
+
 /* section{
   background: url(bg.jpeg) no-repeat;
   background-position: center;
@@ -119,60 +141,68 @@ label #cancel{
   height: 100vh;
   transition: all .5s;
 } */
-nav{
+nav {
   background-color: #042331;
   padding: .8em 1em;
   justify-content: space-between;
   align-items: center;
-  
+
 }
-nav a{
+
+nav a {
   color: white;
   text-decoration: none;
 }
-nav a:hover{
+
+nav a:hover {
   color: white;
   text-decoration: none;
 }
-.user a{
+
+.user a {
   font-size: 20px;
 }
 
-.form{
+.form {
   width: 70%;
   margin: auto;
 }
-.table{
+
+.table {
   width: 70% !important;
   margin: auto !important;
 }
-.success{
-  color: #155724!important;
-  background-color: #d4edda!important;
-  border-color: #c3e6cb!important;
+
+.success {
+  color: #155724 !important;
+  background-color: #d4edda !important;
+  border-color: #c3e6cb !important;
 }
-.danger{
-  color: #491217!important;
-  background-color: #ffb9d1!important;
-  padding:8px 10px;
-  border-color: #491217!important;
+
+.danger {
+  color: #491217 !important;
+  background-color: #ffb9d1 !important;
+  padding: 8px 10px;
+  border-color: #491217 !important;
 }
+
 @media screen and (max-width:924px) {
-  .form{
+  .form {
     width: 100%;
   }
 }
 
 @media screen and (max-width:924px) {
-  .table{
+  .table {
     width: 100% !important;
   }
-  nav{
+
+  nav {
     background-color: #042331;
     padding: .8em 1em;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
+
   }
 }

@@ -8,8 +8,8 @@ $posts = getPublishedPost();
 ?>
 
 <title>Home | Myron-Blog</title>
-    
-<div class="content1"  style="top: 180px;">
+
+<div class="content1" style="top: 180px;">
 
     <div class="content">
         <form action="search.php" method="post" class="nav_form mobile_nav">
@@ -34,28 +34,28 @@ $posts = getPublishedPost();
                     <?php foreach ($posts as $key => $post) : ?>
 
                         <!-- function that fetches topics -->
-                        <?php 
-                            $topicId = $post['topic_id'];
-                            $category = selectOne('topics', ['id' => $topicId]);
-                            // dump($topics);
+                        <?php
+                        $topicId = $post['topic_id'];
+                        $category = selectOne('topics', ['id' => $topicId]);
+                        // dump($topics);
                         ?>
 
                         <div class="card">
                             <div class="img_sec">
 
                                 <div class="topic">
-                                    <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name']?>"><?php echo $category['name'] ?></a></p>
+                                    <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name'] ?>"><?php echo $category['name'] ?></a></p>
                                 </div>
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                             </div>
                             <div class="title_sec">
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <h2 class="title"><?php echo $post['title'] ?></h2>
                                 </a>
 
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <p class="post_content">
-                                        <?php echo substr($post['body'], 0, 120).'...'?>
+                                        <?php echo substr($post['body'], 0, 120) . '...' ?>
                                     </p>
                                 </a>
                                 <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
@@ -82,7 +82,7 @@ $posts = getPublishedPost();
 
                         <div class="card">
                             <div class="img_sec">
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <div class="Video_tag">
 
                                         <p><span class="fas fa-play"></p>
@@ -92,13 +92,13 @@ $posts = getPublishedPost();
                             </div>
 
                             <div class="title_sec">
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <h2 class="title"><?php echo $post['title'] ?></h2>
                                 </a>
 
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <p class="post_content">
-                                        <?php echo substr($post['body'], 0, 120).'...'?>
+                                        <?php echo substr($post['body'], 0, 120) . '...' ?>
                                     </p>
                                 </a>
                                 <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
@@ -123,28 +123,28 @@ $posts = getPublishedPost();
                     <?php foreach ($posts as $key => $post) : ?>
 
                         <!-- function that fetches topics -->
-                        <?php 
-                            $topicId = $post['topic_id'];
-                            $category = selectOne('topics', ['id' => $topicId]);
-                            // dump($topics);
+                        <?php
+                        $topicId = $post['topic_id'];
+                        $category = selectOne('topics', ['id' => $topicId]);
+                        // dump($topics);
                         ?>
 
                         <div class="card">
                             <div class="img_sec">
 
-                            <div class="topic">
-                                <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name']?>"><?php echo $category['name'] ?></a></p>
-                            </div>
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
+                                <div class="topic">
+                                    <p><a href="<?php echo BASE_URL . '/category.php?t_id=' . $category['id'] . '&name=' . $category['name'] ?>"><?php echo $category['name'] ?></a></p>
+                                </div>
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                             </div>
                             <div class="title_sec">
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <h2 class="title"><?php echo $post['title'] ?></h2>
                                 </a>
 
-                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title']?>; ?>">
+                                <a href="post.php?id=<?php echo $post['id'] . '&title=' . $post['title'] ?>; ?>">
                                     <p class="post_content">
-                                        <?php echo substr($post['body'], 0, 120).'...'?>
+                                        <?php echo substr($post['body'], 0, 120) . '...' ?>
                                     </p>
                                 </a>
                                 <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
@@ -169,4 +169,3 @@ $posts = getPublishedPost();
 
     <?php require(ROOT_PATH . "/app/includes/footer.php") ?>
 </div>
-

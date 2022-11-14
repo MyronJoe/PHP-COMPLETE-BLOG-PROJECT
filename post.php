@@ -1,22 +1,21 @@
-
 <?php require_once 'path.php';
-require_once(ROOT_PATH . "/app/includes/header.php") ;
+require_once(ROOT_PATH . "/app/includes/header.php");
 require_once(ROOT_PATH . "/app/controllers/posts.php");
 
 $posts = $posts = getPublishedPost();
 
 
-if(isset($_GET['id'])){
+if (isset($_GET['id'])) {
     $post = selectOne('posts', ["id" => $_GET['id']]);
 }
 
 $pageTitle = $post['title'];
 
-                   
+
 $topicId = $post['topic_id'];
 $topic = selectOne('topics', ['id' => $topicId]);
 
-                    
+
 ?>
 <title><?php echo $pageTitle ?> | Myron-Blog</title>
 
@@ -28,7 +27,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
             <div class="left">
                 <!-------------------------------- Post section ------------------------------------>
                 <div class="post_sec">
-                    
+
                     <div class="post_topic">
                         <p><?php echo $topic['name'] ?></p>
                     </div>
@@ -58,8 +57,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
                             <small style="font-size: 14px;"><?php echo $post['title'] ?></small>
                         </div>
 
-                        <div class="post_cont"
-                            style="line-height:23px; color:#4C4E4D; letter-spacing: 1px; font-size: 18px;">
+                        <div class="post_cont" style="line-height:23px; color:#4C4E4D; letter-spacing: 1px; font-size: 18px;">
 
                             <?php echo $post['body'] ?>
 
@@ -67,8 +65,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
 
                         <div class="downloa_sec" style="margin: 35px 0;">
                             <p><strong>Listen and share your thought below:</strong></p>
-                            <p style="margin: 25px 0;"><strong><audio src="audio/Dremo-Monaco-(TrendyBeatz.com).mp3"
-                                        controls="controls"></audio></strong></p>
+                            <p style="margin: 25px 0;"><strong><audio src="audio/Dremo-Monaco-(TrendyBeatz.com).mp3" controls="controls"></audio></strong></p>
 
                             <p><a href=""><strong style="color: #040820; font-size: 20px;">DOWNLOAD MP3</strong></a></p>
                         </div>
@@ -78,8 +75,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
 
                     <div id="M811623ScriptRootC1323864">
                     </div>
-                    <script data-cfasync="false"
-                        src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
                     <script src="https://jsc.adskeeper.com/x/c/xclusivepop.com.1323864.js" async>
                     </script>
 
@@ -95,40 +91,40 @@ $topic = selectOne('topics', ['id' => $topicId]);
 
                             <div class="Music">
 
-                            <?php foreach ($posts as $key => $post) : ?>
+                                <?php foreach ($posts as $key => $post) : ?>
 
-                                <!-- function that fetches topics -->
-                                <?php 
+                                    <!-- function that fetches topics -->
+                                    <?php
                                     $topicId = $post['topic_id'];
                                     $topicss = selectOne('topics', ['id' => $topicId]);
                                     // dump($topics);
-                                ?>
+                                    ?>
 
 
-                                <div class="card">
-                                    <div class="img_sec">
+                                    <div class="card">
+                                        <div class="img_sec">
 
-                                        <div class="topic">
-                                            <p><a href="#"><?php echo $topicss['name'] ?></a></p>
+                                            <div class="topic">
+                                                <p><a href="#"><?php echo $topicss['name'] ?></a></p>
+                                            </div>
+                                            <a href="post.php?id=<?php echo $post['id']; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
                                         </div>
-                                        <a href="post.php?id=<?php echo $post['id']; ?>"><img src="<?php echo BASE_URL . '/assets/images/' . $post['image'] ?>" alt="<?php echo $post['title'] ?>"></a>
-                                    </div>
-                                    <div class="title_sec">
-                                        <a href="post.php?id=<?php echo $post['id']; ?>">
-                                            <h2 class="title"><?php echo $post['title'] ?></h2>
-                                        </a>
+                                        <div class="title_sec">
+                                            <a href="post.php?id=<?php echo $post['id']; ?>">
+                                                <h2 class="title"><?php echo $post['title'] ?></h2>
+                                            </a>
 
-                                        <a href="post.php?id=<?php echo $post['id']; ?>">
-                                            <p class="post_content">
-                                                <?php echo substr($post['body'], 0, 120).'...'?>
-                                            </p>
-                                        </a>
-                                        <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
+                                            <a href="post.php?id=<?php echo $post['id']; ?>">
+                                                <p class="post_content">
+                                                    <?php echo substr($post['body'], 0, 120) . '...' ?>
+                                                </p>
+                                            </a>
+                                            <small>BY <a href="#"><span style="color:red; margin-right: 10px;"><?php echo $post['username'] ?></span></a><?php echo date('F j, Y', strtotime($post['created_at'])) ?></small>
+                                        </div>
                                     </div>
-                                </div>                                  
 
-                            <?php endforeach; ?>
-                                
+                                <?php endforeach; ?>
+
                             </div>
                         </div>
                     </div>
@@ -146,7 +142,7 @@ $topic = selectOne('topics', ['id' => $topicId]);
         </section>
 
     </div>
-    
+
     <?php include(ROOT_PATH . "/app/includes/footer.php") ?>
 
 </div>

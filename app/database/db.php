@@ -27,7 +27,7 @@
         global $conn;
         $sql = "SELECT * FROM $table";
         if (empty($conditions)) {
-            $stmt = $conn->prepare($sql);
+            $stmt = $conn->prepare($sql . " ORDER BY id DESC");
             $stmt->execute();
             $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
             return $records;
@@ -135,6 +135,8 @@
         global $conn;
 
         $sql = "SELECT p.*, u.username FROM posts AS p JOIN users AS u ON p.user_id=u.id WHERE p.published = ?";
+
+        $sql = $sql . " ORDER BY id DESC";
         $stmt = executeQuery($sql, ['published' => 1]);
         $records = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
         return $records;

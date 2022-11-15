@@ -44,7 +44,7 @@ adminOnly()
                             <td><?php echo $topic['name'] ?></td>
                             <td>
                                 <a href="edit.php?id=<?php echo $topic['id']; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                                <a href="index.php?del_id=<?php echo $topic['id'] ?>" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="index.php?del_id=<?php echo $topic['id'] ?>" onclick="return confirm('Are you sure...?')" class="btn btn-sm btn-danger">Delete</a>
                             </td>
                         </tr>
 

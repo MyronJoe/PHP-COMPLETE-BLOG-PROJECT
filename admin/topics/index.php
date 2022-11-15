@@ -50,15 +50,6 @@ adminOnly()
 
                     <?php endforeach ?>
 
-
-                    <!-- <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>
-                            <a href="<?php echo BASE_URL . '/admin/topics/edit.php'; ?>" class="btn btn-sm btn-primary mr-1">Edit</a>
-                            <a href="" class="btn btn-sm btn-danger">Delete</a>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
 

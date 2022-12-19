@@ -38,6 +38,4 @@ guestOnly();
         </div>
         <?php include(ROOT_PATH . "/app/includes/footer.php") ?>
     </div>
-
-
 </div>

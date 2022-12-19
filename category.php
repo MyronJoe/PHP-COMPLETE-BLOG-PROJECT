@@ -9,7 +9,6 @@ if (isset($_GET['t_id'])) {
 }
 
 ?>
-
 <div class="content1" style="top: 180px;">
     <div class="content">
 

@@ -6,7 +6,6 @@ include(ROOT_PATH . "/app/controllers/topics.php");
 $posts = getPublishedPost();
 
 ?>
-
 <title>Home | Myron-Blog</title>
 
 <div class="content1" style="top: 180px;">
@@ -18,7 +17,6 @@ $posts = getPublishedPost();
         </form>
 
         <?php include(ROOT_PATH . "/app/includes/messages.php"); ?>
-
         <section>
             <!-------------------------------- Left side ------------------------------------>
             <div class="left">

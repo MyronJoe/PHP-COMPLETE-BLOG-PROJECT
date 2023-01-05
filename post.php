@@ -11,7 +11,6 @@ if (isset($_GET['id'])) {
 
 $pageTitle = $post['title'];
 
-
 $topicId = $post['topic_id'];
 $topic = selectOne('topics', ['id' => $topicId]);
 

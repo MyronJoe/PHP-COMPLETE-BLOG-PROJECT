@@ -17,7 +17,6 @@ if (isset($_POST['search-term'])) {
 
 ?>
 
-
 <div class="content1" style="top: 180px;">
 
     <div class="content">
@@ -63,12 +62,8 @@ if (isset($_POST['search-term'])) {
                         </div>
 
                     <?php endforeach; ?>
-
-
                 </div>
                 <!-------------------------------- Video Section ------------------------------------>
-
-
             </div>
             <!-------------------------------- Right side ------------------------------------>
             <div class="right">

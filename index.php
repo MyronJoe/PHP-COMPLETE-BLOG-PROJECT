@@ -154,16 +154,12 @@ $posts = getPublishedPost();
                         <a href="">More News</a>
                     </div>
                 </div>
-
             </div>
             <!-------------------------------- Right side ------------------------------------>
             <div class="right">
                 <?php require("app/includes/side.php") ?>
-
             </div>
         </section>
-
     </div>
-
     <?php require(ROOT_PATH . "/app/includes/footer.php") ?>
 </div>

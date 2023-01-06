@@ -33,8 +33,6 @@ function validateUser($user, $errors){
         
     }
 
-    // dump($errors);
-
     return $errors;
 }
 
@@ -48,8 +46,6 @@ function validateLogin($user, $errors){
     if (empty($user["password"])) {
         array_push($errors, 'password is required');
     }
-
-    // dump($errors);
 
     return $errors;
 }

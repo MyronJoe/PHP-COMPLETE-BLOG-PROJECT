@@ -9,7 +9,6 @@ function usersOnly($redirect = '/index.php'){
     }
 }
 
-
 function adminOnly($redirect = '/index.php'){
     if (empty($_SESSION["id"]) || empty($_SESSION["admin"])) {
         $_SESSION['message'] = 'You are not authorized';
@@ -19,13 +18,11 @@ function adminOnly($redirect = '/index.php'){
     }
 }
 
-
 function guestOnly($redirect = '/index.php'){
     if (!empty($_SESSION["id"])) {
         header('location: ' .BASE_URL . $redirect);
         exit();
     }
 }
-
 
 ?>

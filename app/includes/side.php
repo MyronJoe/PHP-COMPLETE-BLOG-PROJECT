@@ -221,7 +221,6 @@
     </form>
 </div>
 
-
 <div >
     <ul class="tags"> 
     <?php foreach ($topics as $key => $topic): ?>

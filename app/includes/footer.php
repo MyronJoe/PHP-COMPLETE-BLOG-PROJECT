@@ -15,10 +15,8 @@
             <li><a href="#">Contact</a></li>
             <li><a href="#">Feedback</a></li>
         </div>
-
         <p>KorrectNaija &copy 2022</p>
     </div>
-
     <script src="assets/js/main.js"></script>
     <script>
 

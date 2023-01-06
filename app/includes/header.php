@@ -19,9 +19,7 @@ require_once(ROOT_PATH . "/app/includes/session.php");
 </head>
 
 <body>
-
     <div class="containerr1">
-
         <div class="hero">
             <div class="logo">
                 <a href="<?php echo BASE_URL . '/index.php' ?>">Myron Blog</a>

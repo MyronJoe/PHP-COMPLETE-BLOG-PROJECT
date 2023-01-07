@@ -43,7 +43,7 @@
 
             if ($_POST['admin']) {
                 $_POST['admin'] = 1;
-                // dump($_POST);
+
                 $user_id = create($table, $_POST);
                 $_SESSION['message'] = "Admin user created successfully";
                 $_SESSION['type'] = "success";

@@ -58,7 +58,6 @@ if (isset($_GET['published']) && isset($_GET['p_id'])) {
 //add post funtinality
 if(isset($_POST['post-btn'])){
     adminOnly();
-    // dump($_FILES['image']);
     $errors = validatePost($_POST, $errors);
     //image upload
     if (!empty($_FILES['image']['name'])) {

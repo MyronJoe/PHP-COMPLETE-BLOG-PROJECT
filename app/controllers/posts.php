@@ -122,7 +122,6 @@ if(isset($_POST['edit-post-btn'])){
         unset($_POST['edit-post-btn'], $_POST['id']);
         $_POST['user_id'] = $_SESSION['id'];
         $_POST['published'] = isset($_POST['published']) ? 1 : 0;
-        // dump($_POST);
 
         $post_id = update($table, $id, $_POST);
         $_SESSION['message'] = 'Post Updated Successfully';

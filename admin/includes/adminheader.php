@@ -13,7 +13,6 @@ require_once(ROOT_PATH . "/app/includes/session.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="icon" href="../../assets/images/Mj-fav-icon.png"/>
     
-
     <style>
       .success{
         color: #155724!important;
@@ -57,9 +56,9 @@ require_once(ROOT_PATH . "/app/includes/session.php");
       }
       .handler:hover .submenu ul{
         display: block;
-        top: 20px;
-        
+        top: 20px; 
       }
+      
     </style>
   </head>
 </head>

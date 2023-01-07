@@ -25,8 +25,7 @@ if (isset($_GET['id'])) {
     $body= $post['body'];
     $topic_id = $post['topic_id'];
     $published = $post['published'];
-    
-    // dump($post);
+
 }
 
 //Delete functionality
